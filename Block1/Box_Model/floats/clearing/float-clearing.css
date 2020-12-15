@@ -1,0 +1,21 @@
+body {
+	font-family: Georgia, Palatino, 'Palatino Linotype', serif;
+	font-size: 1.2em;
+	line-height: 1.5;
+	max-width: 60em;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.entry {
+	border: 4px solid black;
+	padding: 0.5em 1em;
+	background: #ccc;
+}
+
+.entry img {
+	float: left;
+	margin-right: 1em;
+}

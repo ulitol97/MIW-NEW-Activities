@@ -1,0 +1,34 @@
+body {
+	color: #444;
+}
+
+	/* Typography */
+
+body {
+	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.6;
+}
+
+h1 {
+	margin: 1.5em 0 1em;
+	font-size: 2.8em;
+	border: solid;
+	border-width: 2px 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0.45em;
+}
+
+section {
+	padding: 0.1em 1em;
+}
+
+#one        { background: #a8c66c; }
+#two        { background: #999; }
+#three      { background: #16acea; }

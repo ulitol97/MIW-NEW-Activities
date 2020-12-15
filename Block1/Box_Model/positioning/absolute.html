@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Posicionamiento absoluto</title>
+	<style type="text/css">
+        body {
+            padding: 0 10%;
+            margin: 3em auto;
+            font: 1.3em/1.6 Georgia, Palatino, 'Palatino Linotype', serif;
+            background: #222;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0.6em;
+            font: bold 4em/1 'Helvetica Neue', Helvetica, Arial, 'Arial Black', sans-serif;
+            letter-spacing: -0.08em;
+        }
+		
+        div {
+			padding: 0.1em 1em;			
+		}
+
+		div.exterior {
+			width: 20em;
+			background-color: #F06060;
+            position: relative;
+		}  
+
+		div.interior {
+			position: absolute;
+			top: 0;
+			left: 3em;
+			width: 6em;
+			background-color: #F3B562;
+		}
+	</style>
+</head>
+<body>
+	<h1>Posicionamiento absoluto</h1>
+	<p>El título anterior y este párrafo no llevan posicionamiento, o, lo que es lo mismo, es como si se hubiese indicado posicionamiento normal (<code>static</code>).
+	</p>
+
+	<div class="exterior">
+		<p>Este párrafo va en el bloque exterior.</p>
+		<div class="interior">
+			<p>Mientras que éste va en el interior.</p>
+		</div>
+	</div>
+
+    	<p>El título anterior y este párrafo no llevan posicionamiento, o, lo que es lo mismo, es como si se hubiese indicado posicionamiento normal (<code>static</code>).
+	</p>
+	<p>El título anterior y este párrafo no llevan posicionamiento, o, lo que es lo mismo, es como si se hubiese indicado posicionamiento normal (<code>static</code>).
+	</p>
+	<p>El título anterior y este párrafo no llevan posicionamiento, o, lo que es lo mismo, es como si se hubiese indicado posicionamiento normal (<code>static</code>).
+	</p>
+	<p>El título anterior y este párrafo no llevan posicionamiento, o, lo que es lo mismo, es como si se hubiese indicado posicionamiento normal (<code>static</code>).
+	</p>
+</body>
+</html>

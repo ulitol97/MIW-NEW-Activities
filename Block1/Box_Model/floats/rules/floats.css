@@ -1,0 +1,40 @@
+body {
+	margin: 2em auto;
+	max-width: 990px;
+	font-family: Georgia, Palatino, 'Palatino Linotype', 'Times New Roman', serif;
+	font-size: 1.2em;
+	line-height: 1.4;
+}
+
+#container {
+	border: 0.5em solid #555;
+	background: #eefaaa;
+	
+}
+
+p {
+	margin: 0;
+}
+
+p + p {
+	margin-top: 1em;
+}
+
+img.left {
+	float: left;
+	margin: 0;
+}
+
+img.right {
+	float: right;
+	margin: 0;
+}
+
+.one, .two, .three {
+	border: 2px solid black;
+	padding: 0.2em 0.4em;
+}
+
+.one		{ background-color: #c5d657; }
+.two		{ background-color: #85cbfd; }
+.three		{ background-color: #de882a; }

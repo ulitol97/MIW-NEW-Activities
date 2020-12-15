@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", Calibri, Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+h1,
+h2 {
+  line-height: 1;
+}
+
+h1 {
+  padding: 0.5em;
+  border-bottom: 2px solid black;
+  font-size: 5.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  font-size: 4.4em;
+  font-weight: bold;
+}
+
+#footer {
+  padding: 0.5em 1em 2em;
+  font-size: 0.9em;
+}
+
+.column {
+  border-bottom: 1px solid #333;
+}
+
+/* Colours
+	 --------------------------*/
+
+#one {
+  background: #335d6a;
+}
+#two {
+  background: #d64f2a;
+}
+#three {
+  background: #9ebea6;
+}
+#footer {
+  background: #45484b;
+}
+
+#one {
+  color: white;
+}
+#footer {
+  color: white;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Margin collapsing</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<style type="text/css">
+        
+		body {
+			font-size: 20px;
+		}
+		
+        p {
+			line-height: 1;
+			margin: 5em 3em;
+			padding: 0.2em;
+			background: white;
+			color: black;
+		}
+		
+        div {
+			margin: 2em;
+			background: #666;
+		}
+		
+        .border {
+			border: 1px solid yellow;
+            padding: 1px;
+		}
+        
+	</style>
+</head>
+<body>
+	
+    <h1>Margin collapsing</h1>
+	
+    <p>This is the first paragraph.</p>
+	
+    <p>This is another normal paragraph.</p>
+	
+    <div>
+		<p>The third one is enclosed in a <code>div</code>.</p>
+	</div>
+	
+    <div class="border">
+		<p>The last one is inside a <code>div</code> that has a border.</p>
+	</div>
+
+    </body>
+</html>

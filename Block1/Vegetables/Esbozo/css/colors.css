@@ -1,0 +1,28 @@
+/* Colors */
+
+header {
+  background-color: rgb(44, 98, 31);
+  color: rgb(220, 238, 213);
+}
+
+body {
+  background-color: rgb(220, 238, 213);
+}
+#main-content {
+  background-color: white;
+  color: #444;
+  border-color: rgb(139, 166, 65);
+}
+#others{
+  border-color: rgb(139, 166, 65);
+}
+#pepper {
+  background-color: rgb(139, 166, 65);
+}
+#tomato {
+  background-color: rgb(127, 16, 15);
+}
+#pepper,
+#tomato {
+  color: white;
+}

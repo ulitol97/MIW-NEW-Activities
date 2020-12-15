@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nuevos Estándares en la Web - El modelo de cajas</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        div {
+            width: 300px;
+            margin: 15px 75px 0;
+        }
+
+        #one, #three {
+            border: 4px dashed #333;
+            padding: 25px;
+        }
+
+        /* Trying box-sizing */
+        #three {
+          box-sizing: border-box;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>El modelo de cajas</h1>
+    <div id="one">¿Cuánto mide de ancho?</div>
+    <div id="two">Éste sólo tiene ancho.</div>
+    <div id="three">¿Y ahora?</div>
+  </body>
+</html>

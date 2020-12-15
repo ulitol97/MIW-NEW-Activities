@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.8;
+}
+
+h1, h2 {
+	line-height: 1;
+}
+
+h1 {
+	padding: 0.5em;
+	border-bottom: 2px solid black;
+	font-family: Palatino, "Palatino Linotype", Georgia, serif;
+	font-size:  4.2em;
+	font-style: italic;
+	text-align: center;	
+}
+
+h2 {
+	margin-top: 0;
+    margin-bottom: 0.3em;
+	font-size: 4.4em;
+	font-weight: bold;
+}
+
+#footer {
+	padding: 0.5em 1em 2em;
+	font-size: 0.9em;
+}
+
+.column {
+	border-bottom: 1px solid #333;
+}
+
+
+	/* Colours 
+	 --------------------------*/	 
+
+body		{ color: #222; }
+
+#one 	{ background: #335D6A; }
+#two 	{ background: #D64F2A; }
+#three	{ background: #9EBEA6; }
+#footer	{ background: #45484B; }
+
+#one	{ color: white; }
+#footer	{ color: white; }
+

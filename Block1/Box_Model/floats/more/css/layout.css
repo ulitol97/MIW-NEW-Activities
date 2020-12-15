@@ -1,0 +1,28 @@
+
+	/* Colours
+	
+		Azul: rgb(220, 237, 249)
+		Amarillo: rgb(255, 246, 225)
+        Rosa: rgb(241, 124, 141)
+		
+	*/
+
+/*
+#main-content {
+	background: rgb(220, 237, 249);
+}
+*/
+
+/*
+#secondary-content {
+    background: rgb(241, 124, 141);
+	color: white;
+}
+*/
+
+    /* Layout */
+
+#main-content {
+	width: 14em;
+	float: left;
+}

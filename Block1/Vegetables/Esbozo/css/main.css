@@ -1,0 +1,97 @@
+/* Images */
+
+img {
+  max-width: 20em;
+}
+
+img.logo {
+  width: 10em;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  display: flow-root;
+  padding: 1em 4em;
+}
+
+header .logo {
+  box-sizing: border-box;
+  float: left;
+  width: 100px;
+}
+
+header .title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 50%;
+  display: inline;
+  font-size: 4em;
+  margin: auto 35px;
+}
+
+/* Body */
+
+#main-content {
+  display: flow-root;
+  border-width: 3px;
+  border-style: solid;
+  margin: 3rem;
+}
+
+#cuisine,
+#others {
+  width: 50%;
+  /* Inner separation with help of box-sizing: border-box; */
+  padding: 5px;
+}
+
+#cuisine {
+  float: right;
+  clear: both;
+}
+
+#others {
+  float: left;
+}
+
+#others ul li {
+  /* Separate each section */
+  padding: 5px;
+  clear: both;
+}
+
+/* Floating images */
+#cuisine img {
+  float: right;
+  margin-right: -3rem;
+}
+
+#pepper img {
+  float: right;
+  margin-right: -3rem;
+}
+
+#asparagus img {
+  float: left;
+}
+
+#tomato img {
+  float: right;
+  margin-right: -3rem;
+}
+
+/* Keep section background color even if text is not larger than image */
+
+#others ul li {
+  display: flow-root;
+}
+
+/* Mid-page separator */
+
+#others {
+  border-right-width: 5px;
+  border-right-style: dashed;
+}
