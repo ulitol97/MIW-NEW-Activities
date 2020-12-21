@@ -1,0 +1,40 @@
+<div itemscope itemtype="http://schema.org/BroadcastEvent" itemid="http://twitter.com/i/events/1336590020224966656">
+
+
+La entrevista a Pablo Montesinos (PP) en @LaHoraTVE en seis tuits
+
+
+</div>
+
+
+-------- TIPS ------------
+
+- Tratar el tweet como social media posting: https://schema.org/SocialMediaPosting
+- Ignorar el avatar, etc. Limitarse al texto.
+
+- Crear un div por cada entidad con los atributos itemscope (vacío) y itemtype (link a la propiedad)
+- Dentro del div crear spans para las propiedades  del item
+- Si dentro del DIV hay otra entidad, no solo propiedades, crear un DIV de nuevo.
+
+- Poner la URL del tweet si es un social media posting
+
+- Ir validando según lo construimos:
+  - Validador Yandex:
+  - Validador Google:
+
+- Microdata no permite mas que describir lo que sale en el texto.
+- JSONLD sí permitiría anotar cosas que deducimos como humanos (que si A contrata a B, B pasa a ser empleado de A, etc.). Algo similar puede ocurrir para nacionalidades: estar muy limitados por el
+contenido en microdata y poder concreatar libremente en JSONLD.
+
+-------- EJEMPLO ---------
+<div itemscope itemtype="http://schema.org/Offer">
+  <span itemprop="name">Blend-O-Matic</span>
+  <span itemprop="price">$19.95</span>
+  <div itemprop="reviews" itemscope itemtype="http://schema.org/AggregateRating">
+    <img src="four-stars.jpg" />
+    <meta itemprop="ratingValue" content="4" />
+    <meta itemprop="bestRating" content="5" />
+    Based on <span itemprop="ratingCount">25</span> user ratings
+  </div>
+</div>
+

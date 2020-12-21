@@ -1,0 +1,26 @@
+.parent {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.square {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-color: blueviolet;
+
+
+  text-align: center;
+}
+
+
+.square .inner {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}

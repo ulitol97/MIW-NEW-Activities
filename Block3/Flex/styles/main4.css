@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.header, .body, .footer {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header {
+  background-color: blue;
+  height: 20%;
+}
+
+.body {
+  background-color: orange;
+  height: 100%; /* Fill all available */
+}
+
+.footer {
+  background-color: green;
+  height: 20%;
+}
+
+
+.inner {
+  color: white;
+  font-size: 2rem;
+}
