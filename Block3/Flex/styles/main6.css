@@ -12,7 +12,9 @@
   align-content: center;
 }
 
-.header, .body, .footer {
+.header,
+.body,
+.footer {
   box-sizing: border-box;
   text-align: center;
 }
@@ -29,6 +31,7 @@
 
 /* Now main is also flex */
 .body {
+  box-sizing: border-box;
   overflow: auto;
   background-color: orange;
   width: 70%;
@@ -38,24 +41,22 @@
   flex-wrap: wrap;
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+
+  padding: 10px;
 }
 
 .body > .contents {
   background-color: brown;
-  width: 30%;
+  flex-basis: 30%;
   height: 40%;
 
   margin: 10px;
-
-  flex-grow: 1;
-  flex-basis: 30%;
 }
 
 /* Last item is double sized */
 .body > .contents:last-child {
-  flex-grow: 2;
-  flex-basis: 62%;
+  flex-basis: calc(60% + 20px);
 }
 
 .aside {
@@ -79,7 +80,6 @@
   background-color: green;
   height: 20%;
 }
-
 
 .inner {
   color: white;
