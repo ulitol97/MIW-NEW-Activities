@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-rows: 2fr 6fr 2fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+.header, .body, .footer {
+  text-align: center;
+}
+
+.header {
+  background-color: blue;
+  grid-row: 1;
+}
+
+.body {
+  background-color: orange;
+  grid-row: 2;
+}
+
+.footer {
+  background-color: green;
+  grid-row: 3;
+}
+
+
+.inner {
+  color: white;
+  font-size: 2rem;
+}

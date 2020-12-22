@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-rows: 2fr 6fr 2fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+.header,
+.body,
+.footer {
+  text-align: center;
+}
+
+.header {
+  background-color: blue;
+  grid-row: 1;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 7fr;
+  grid-row: 2;
+}
+
+.aside {
+  grid-column: 1;
+  background-color: red;
+}
+
+.body {
+  grid-column: 2;
+  background-color: orange;
+}
+
+.footer {
+  background-color: green;
+  grid-row: 3;
+}
+
+.inner {
+  color: white;
+  font-size: 2rem;
+}
