@@ -24,7 +24,7 @@
 
 .main {
   display: flex;
-  height: 100%; /* Fill all available */
+  height: 60%; /* Fill all available */
 }
 
 /* Now main is also flex */
