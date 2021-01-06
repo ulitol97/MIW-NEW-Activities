@@ -1,0 +1,175 @@
+<!--
+  Notas:
+    - Se escogen los dos primeros párrafos de la noticia en
+    https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml.
+
+    - Se trata al nodo raíz como NewsArticle y el resto de información cuelga de él ("main entity", "about").
+    - El primer pequeño párrafo se describe a grandes rasgos como una acción por la que la UE da una licencia a Moderna.
+    - El segundo párrafo describe un SocialMediaPosting.
+
+    - El validador de Google (https://search.google.com/structured-data/testing-tool)
+      da algunas warnings ya que hay información que no tenemos para concreatar.
+-->
+
+<div itemscope itemtype="http://schema.org/NewsArticle">
+  <link
+    itemprop="url discussionUrl mainEntityOfPage"
+    content="https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml"
+  />
+  <meta itemprop="wordCount" content="69" />
+
+  <meta itemprop="author publisher" content="RTVE.es/AGENCIAS" />
+
+  <link
+    itemprop="image"
+    content="https://img2.rtve.es/css/rtve.commons/rtve.header.footer/i/logoRTVE.png"
+  />
+  <meta
+    itemtype="http://schema.org/Organization"
+    itemprop="datePublished dateModified"
+    content="2021-01-06T14:28"
+  />
+  <meta
+    itemprop="headline"
+    content="Bruselas autoriza la vacuna de Moderna tras el visto bueno de la Agencia Europea del Medicamento"
+  />
+
+  <span itemprop="articleBody">
+    <div
+      itemprop="mainEntity"
+      itemscope
+      itemtype="https://schema.org/GiveAction"
+    >
+      <link
+        itemprop="actionStatus"
+        content="https://schema.org/CompletedActionStatus"
+      />
+
+      <div
+        itemprop="agent"
+        itemscope
+        itemtype="http://schema.org/GovernmentOrganization"
+      >
+        <div id="CE">
+          <span itemprop="name">La Comisión Europea</span>
+          (
+          <span itemprop="alternateName">CE</span>
+          )
+        </div>
+      </div>
+      ha otorgado este miércoles
+      <div itemprop="object" itemscope itemtype="https://schema.org/Grant">
+        <span itemprop="description">una licencia condicional</span>
+        <div
+          itemprop="potentialAction"
+          itemscope
+          itemtype="http://schema.org/UseAction"
+          itemref="potentialAction"
+        ></div>
+      </div>
+      a
+      <div
+        itemprop="recipient"
+        itemscope
+        itemtype="http://schema.org/MedicalOrganization"
+      >
+        <span itemprop="name">Moderna</span>
+      </div>
+      para el
+      <div id="potentialAction">
+        <span itemprop="description"
+          >uso en los
+          <div
+            itemprop="agent"
+            itemscope
+            itemtype="http://schema.org/Consortium"
+          >
+            <meta itemprop="address" content="Europa" />
+            <span itemprop="name">países europeos</span>
+          </div>
+          <div
+            itemprop="object"
+            itemscope
+            itemtype="http://schema.org/MedicalTherapy"
+          >
+            de su
+            <meta itemprop="howPerformed" content="vaccination" />
+            <span itemprop="name"
+              >vacuna contra el
+              <div
+                itemprop="preparation"
+                itemscope
+                itemtype="http://schema.org/InfectiousDisease"
+              >
+                <span itemprop="infectiousAgent">COVID-19</span>
+              </div></span
+            >
+          </div>
+        </span>
+      </div>
+      ,
+      <meta itemprop="startTime" content="2021-01-06" />
+      solo unas horas después de que la Agencia Europea del Medicamento (EMA)
+      haya respaldado el fármaco.
+    </div>
+
+    <div
+      itemprop="about"
+      itemscope
+      itemtype="https://schema.org/SocialMediaPosting"
+    >
+      "
+      <span itemprop="articleBody">
+        <div
+          itemprop="about"
+          itemscope
+          itemtype="https://schema.org/AcceptAction"
+        >
+          <div
+            itemprop="agent"
+            itemscope
+            itemtype="http://schema.org/GovernmentOrganization"
+            itemref="CE"
+          >
+            Hemos
+          </div>
+          autorizado
+          <div
+            itemprop="object"
+            itemscope
+            itemtype="http://schema.org/MedicalTherapy"
+          >
+            <meta itemprop="howPerformed" content="vaccination" />
+
+            la
+            <span itemprop="name"
+              >vacuna de
+              <div
+                itemprop="recognizingAuthority"
+                itemscope
+                itemtype="http://schema.org/MedicalOrganization"
+              >
+                <span itemprop="name">Moderna</span>
+              </div>
+            </span>
+            ,
+            <span itemprop="description"
+              >la segunda vacuna aprobada en la UE</span
+            >
+          </div>
+        </div>
+      </span>
+      ",
+      <div itemprop="audience" itemscope itemtype="https://schema.org/Audience">
+        ha escrito en <span itemprop="audienceType">Twitter</span>
+      </div>
+      <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <link itemprop="gender" content="https://schema.org/Female" />
+        la presidenta de la Comisión Europea,
+        <span itemprop="givenName">Ursula</span
+        ><span itemprop="familyName">von der Leyen</span>
+      </div>
+      .
+    </div>
+  </span>
+</div>
