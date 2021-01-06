@@ -1,12 +1,3 @@
-<div itemscope itemtype="http://schema.org/BroadcastEvent" itemid="http://twitter.com/i/events/1336590020224966656">
-
-
-La entrevista a Pablo Montesinos (PP) en @LaHoraTVE en seis tuits
-
-
-</div>
-
-
 -------- TIPS ------------
 
 - Tratar el tweet como social media posting: https://schema.org/SocialMediaPosting
@@ -20,9 +11,13 @@ La entrevista a Pablo Montesinos (PP) en @LaHoraTVE en seis tuits
 
 - Ir validando según lo construimos:
   - Validador Yandex:
-  - Validador Google:
+  - Validador Google: https://search.google.com/structured-data/testing-tool
 
-- Microdata no permite mas que describir lo que sale en el texto.
+- Ayudas:
+  - https://yandex.com/support/webmaster/schema-org/intro-schema-org.html
+  - https://medium.com/@vilcins/structured-data-markup-validation-and-testing-tools-1968bd5dea37
+
+- Microdata no permite mas que describir lo que sale en el texto... No podemos incluir el autor ni mucho más
 - JSONLD sí permitiría anotar cosas que deducimos como humanos (que si A contrata a B, B pasa a ser empleado de A, etc.). Algo similar puede ocurrir para nacionalidades: estar muy limitados por el
 contenido en microdata y poder concreatar libremente en JSONLD.
 

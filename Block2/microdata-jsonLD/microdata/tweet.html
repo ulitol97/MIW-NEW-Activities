@@ -1,0 +1,111 @@
+<!--
+  Notas:
+    - Se trata al nodo raíz como SocialMediaPosting y el resto de información cuelga de él (propiedad "about").
+    - El tweet contiene 3 oraciones: la primera se trata como oferta de empleo (JobPosting) por variedad,
+      la segunda como una acción (Action) con otras acciones como resultado
+      y la tercera se ignora.
+
+    - El validador de Google (https://search.google.com/structured-data/testing-tool)
+      da algunas warnings ya que hay información que no tenemos.
+-->
+
+<div itemscope itemtype="http://schema.org/SocialMediaPosting">
+  <meta itemprop="wordCount" content="45" />
+  <meta
+    itemprop="url"
+    content="https://twitter.com/marianofake/status/1346397080739262464"
+  />
+  <meta
+    itemprop="discussionUrl"
+    content="https://twitter.com/marianofake/status/1346397080739262464"
+  />
+  <span itemprop="articleBody">
+    <div itemprop="about" itemscope itemtype="http://schema.org/JobPosting">
+      -
+
+      <meta itemprop="datePosted" content="2020-12-18" />
+      <span itemprop="jobStartDate">18 de diciembre</span>
+      :
+      <div
+        itemprop="hiringOrganization"
+        itemscope
+        itemtype="http://schema.org/MedicalOrganization"
+      >
+        <span itemprop="name">Cruz Roja</span>
+      </div>
+      inicia proceso de selección con el fin de contratar
+      <span itemprop="name description">
+        <span itemprop="title educationRequirements">enfermeras/os</span> para
+        <div
+          itemprop="potentialAction"
+          itemscope
+          itemtype="http://schema.org/Action"
+        >
+          <span itemprop="description">
+            campaña de
+            <div
+              itemprop="result"
+              itemscope
+              itemtype="http://schema.org/Action"
+            >
+              <span itemprop="description">
+                vacunación contra la
+                <div
+                  itemprop="object"
+                  itemscope
+                  itemtype="http://schema.org/InfectiousDisease"
+                >
+                  <span itemprop="infectiousAgent">Covid19</span>
+                </div>
+              </span>
+            </div>
+          </span>
+        </div>
+      </span>
+      <meta itemprop="jobImmediateStart" content="true" />
+    </div>
+    .
+    <div itemprop="about" itemscope itemtype="http://schema.org/Action">
+      -
+      <span itemprop="startTime">4 de enero</span>
+      :
+      <div itemprop="agent" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="familyName">Díaz Ayuso</span>
+      </div>
+      <span itemprop="description">
+        contrata (sin concurso) a
+        <div
+          itemprop="object"
+          itemscope
+          itemtype="http://schema.org/MedicalOrganization"
+        >
+          <span itemprop="name">Cruz Roja</span>
+        </div>
+        para
+        <div itemprop="result" itemscope itemtype="http://schema.org/Action">
+          <span itemprop="description">
+            campaña de
+            <div
+              itemprop="result"
+              itemscope
+              itemtype="http://schema.org/Action"
+            >
+              <span itemprop="description">
+                vacunación contra la
+                <div
+                  itemprop="object"
+                  itemscope
+                  itemtype="http://schema.org/InfectiousDisease"
+                >
+                  <span itemprop="infectiousAgent">Covid19</span>
+                </div>
+              </span>
+            </div>
+          </span>
+        </div>
+      </span>
+      .
+    </div>
+    Blanco y en botella.
+  </span>
+</div>
