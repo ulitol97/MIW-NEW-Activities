@@ -1,100 +1,152 @@
 {
-  "@id": "https://twitter.com/marianofake/status/1346397080739262464",
-  "@type": "SocialMediaPosting",
-  "wordCount": "45",
-  "url": "https://twitter.com/marianofake/status/1346397080739262464",
-  "discussionUrl": "https://twitter.com/marianofake/status/1346397080739262464",
-  "articleBody": "-18 de diciembre: Cruz Roja inicia proceso de selección con el fin de contratar enfermeras/os para campaña de vacunación contra la Covid19. - 4 de enero: Díaz Ayuso contrata (sin concurso) a Cruz Roja para campaña de vacunación contra la Covid19. Blanco y en botella.",
-  "about": [
+  "@id": "https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml",
+  "@type": "NewsArticle",
+  "wordCount": "69",
+
+  "author": "RTVE.es/AGENCIAS",
+  "publisher": "RTVE.es/AGENCIAS",
+
+  "url": "https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml",
+  "discussionUrl": "https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml",
+  "mainEntityOfPage": "https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml",
+  "image": "https://img2.rtve.es/css/rtve.commons/rtve.header.footer/i/logoRTVE.png",
+  "datePublished": "2021-01-06T14:28",
+  "dateModified": "2021-01-06T14:28",
+  "headline": "Bruselas autoriza la vacuna de Moderna tras el visto bueno de la Agencia Europea del Medicamento",
+  "articleBody": "La Comisión Europea (CE) ha otorgado este miércoles una licencia condicional a Moderna para el uso en los países europeos de su vacuna contra el COVID-19, solo unas horas después de que la Agencia Europea del Medicamento (EMA) haya respaldado el fármaco. Hemos autorizado la vacuna de Moderna, la segunda vacuna aprobada en la UE, ha escrito en Twitter la presidenta de la Comisión Europea, Ursula von der Leyen.",
+  "mainEntity": [
     {
-      "@type": "JobPosting",
-      "datePosted": "2020-12-18",
-      "jobStartDate": "18 de diciembre",
-      "name": "enfermeras/os para campaña de vacunación contra la Covid19",
-      "description": "enfermeras/os para campaña de vacunación contra la Covid19",
-      "title": "enfermeras/os",
-      "educationRequirements": "enfermeras/os",
-      "jobImmediateStart": "true",
-      "hiringOrganization": [
-        {
-          "@type": "MedicalOrganization",
-          "name": "Cruz Roja"
-        }
-      ],
-      "potentialAction": [
-        {
-          "@type": "Action",
-          "description": "campaña de vacunación contra la Covid19",
-          "result": [
-            {
-              "@type": "Action",
-              "description": "vacunación contra la Covid19",
-              "object": [
-                {
-                  "@type": "InfectiousDisease",
-                  "infectiousAgent": "Covid19"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "@type": "Action",
-      "startTime": "4 de enero",
-      "description": "contrata (sin concurso) a Cruz Roja para campaña de vacunación contra la Covid19",
+      "@type": "GiveAction",
+      "actionStatus": "https://schema.org/CompletedActionStatus",
+      "startTime": "2021-01-06",
       "agent": [
         {
-          "@type": "Person",
-          "familyName": "Díaz Ayuso"
+          "@type": "GovernmentOrganization",
+          "name": "La Comisión Europea",
+          "alternateName": "CE"
         }
       ],
       "object": [
         {
-          "@type": "MedicalOrganization",
-          "familyName": "Cruz Roja"
-        }
-      ],
-      "result": [
-        {
-          "@type": "Action",
-          "description": "campaña de vacunación contra la Covid19",
-          "result": [
+          "@type": "Grant",
+          "description": "una licencia condicional",
+          "potentialAction": [
             {
-              "@type": "Action",
-              "description": "vacunación contra la Covid19",
+              "@type": "UseAction",
+              "description": "uso en los países europeos de su vacuna contra el COVID-19",
+              "agent": [
+                {
+                  "@type": "Consortium",
+                  "address": "Europa",
+                  "name": "países europeos"
+                }
+              ],
               "object": [
                 {
-                  "@type": "InfectiousDisease",
-                  "infectiousAgent": "Covid19"
+                  "@type": "MedicalTherapy",
+                  "howPerformed": "vaccination",
+                  "name": "vacuna contra el COVID-19",
+                  "preparation": [
+                    {
+                      "@type": "InfectiousDisease",
+                      "infectiousAgent": "COVID-19"
+                    }
+                  ]
                 }
               ]
             }
           ]
         }
+      ],
+      "recipient": [
+        {
+          "@type": "MedicalOrganization",
+          "name": "Moderna"
+        }
       ]
     }
   ],
-
+  "about": [
+    {
+      "@type": "SocialMediaPosting",
+      "articleBody": "Hemos autorizado la vacuna de Moderna, la segunda vacuna aprobada en la UE",
+      "about": [
+        {
+          "@type": "AcceptAction",
+          "agent": [
+            {
+              "@type": "Consortium",
+              "address": "Europa",
+              "name": "países europeos"
+            }
+          ],
+          "object": [
+            {
+              "@type": "MedicalTherapy",
+              "howPerformed": "vaccination",
+              "name": "vacuna de Moderna",
+              "description": "la segunda vacuna aprobada en la UE"
+            }
+          ]
+        }
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "gender": "https://schema.org/Female",
+          "givenName": "Ursula",
+          "familyName": "von der Leyen"
+        }
+      ],
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Twitter"
+        }
+      ]
+    }
+  ],
   "@context": {
+    "NewsArticle": "http://schema.org/NewsArticle",
     "SocialMediaPosting": "http://schema.org/SocialMediaPosting",
     "JobPosting": "http://schema.org/JobPosting",
+    "GovernmentOrganization": "http://schema.org/GovernmentOrganization",
+    "Consortium": "http://schema.org/Consortium",
     "MedicalOrganization": "http://schema.org/MedicalOrganization",
+    "MedicalTherapy": "http://schema.org/MedicalTherapy",
     "InfectiousDisease": "http://schema.org/InfectiousDisease",
     "Action": "http://schema.org/Action",
+    "GiveAction": "http://schema.org/GiveAction",
+    "UseAction": "http://schema.org/UseAction",
+    "AcceptAction": "http://schema.org/AcceptAction",
     "Person": "http://schema.org/Person",
+    "Grant": "http://schema.org/Grant",
+    "Audience": "http://schema.org/Audience",
 
     "name": "http://schema.org/name",
+    "alternateName": "http://schema.org/alternateName",
+    "gender": "http://schema.org/gender",
+    "address": "http://schema.org/address",
+    "givenName": "http://schema.org/givenName",
     "familyName": "http://schema.org/familyName",
     "description": "http://schema.org/description",
     "title": "http://schema.org/title",
+    "image": "http://schema.org/image",
     "wordCount": "http://schema.org/wordCount",
+    "headline": "http://schema.org/headline",
     "about": "http://schema.org/about",
+    "mainEntity": "http://schema.org/mainEntity",
+    "mainEntityOfPage": "http://schema.org/mainEntityOfPage",
+    "actionStatus": "http://schema.org/actionStatus",
     "url": "http://schema.org/url",
-    "articleBody": "http://schema.org/articleBody",
     "discussionUrl": "http://schema.org/discussionUrl",
+    "author": "http://schema.org/author",
+    "publisher": "http://schema.org/publisher",
+    "articleBody": "http://schema.org/articleBody",
     "datePosted": "http://schema.org/datePosted",
+    "datePublished": "http://schema.org/datePublished",
+    "dateModified": "http://schema.org/dateModified",
+    "startTime": "http://schema.org/startTime",
     "jobStartDate": "http://schema.org/jobStartDate",
     "jobImmediateStart": "http://schema.org/jobImmediateStart",
     "educationRequirements": "http://schema.org/educationRequirements",
@@ -102,7 +154,12 @@
     "result": "http://schema.org/result",
     "agent": "http://schema.org/agent",
     "object": "http://schema.org/object",
+    "recipient": "http://schema.org/recipient",
     "potentialAction": "http://schema.org/potentialAction",
-    "infectiousAgent": "http://schema.org/infectiousAgent"
+    "infectiousAgent": "http://schema.org/infectiousAgent",
+    "preparation": "http://schema.org/preparation",
+    "howPerformed": "http://schema.org/howPerformed",
+    "audience": "http://schema.org/audience",
+    "audienceType": "http://schema.org/audienceType"
   }
 }

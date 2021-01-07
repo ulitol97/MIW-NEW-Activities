@@ -95,6 +95,7 @@
     "articleBody": "http://schema.org/articleBody",
     "discussionUrl": "http://schema.org/discussionUrl",
     "datePosted": "http://schema.org/datePosted",
+    "startTime": "http://schema.org/startTime",
     "jobStartDate": "http://schema.org/jobStartDate",
     "jobImmediateStart": "http://schema.org/jobImmediateStart",
     "educationRequirements": "http://schema.org/educationRequirements",
