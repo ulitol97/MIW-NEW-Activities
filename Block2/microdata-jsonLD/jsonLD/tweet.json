@@ -1,0 +1,108 @@
+{
+  "@id": "https://twitter.com/marianofake/status/1346397080739262464",
+  "@type": "SocialMediaPosting",
+  "wordCount": "45",
+  "url": "https://twitter.com/marianofake/status/1346397080739262464",
+  "discussionUrl": "https://twitter.com/marianofake/status/1346397080739262464",
+  "articleBody": "-18 de diciembre: Cruz Roja inicia proceso de selección con el fin de contratar enfermeras/os para campaña de vacunación contra la Covid19. - 4 de enero: Díaz Ayuso contrata (sin concurso) a Cruz Roja para campaña de vacunación contra la Covid19. Blanco y en botella.",
+  "about": [
+    {
+      "@type": "JobPosting",
+      "datePosted": "2020-12-18",
+      "jobStartDate": "18 de diciembre",
+      "name": "enfermeras/os para campaña de vacunación contra la Covid19",
+      "description": "enfermeras/os para campaña de vacunación contra la Covid19",
+      "title": "enfermeras/os",
+      "educationRequirements": "enfermeras/os",
+      "jobImmediateStart": "true",
+      "hiringOrganization": [
+        {
+          "@type": "MedicalOrganization",
+          "name": "Cruz Roja"
+        }
+      ],
+      "potentialAction": [
+        {
+          "@type": "Action",
+          "description": "campaña de vacunación contra la Covid19",
+          "result": [
+            {
+              "@type": "Action",
+              "description": "vacunación contra la Covid19",
+              "object": [
+                {
+                  "@type": "InfectiousDisease",
+                  "infectiousAgent": "Covid19"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Action",
+      "startTime": "4 de enero",
+      "description": "contrata (sin concurso) a Cruz Roja para campaña de vacunación contra la Covid19",
+      "agent": [
+        {
+          "@type": "Person",
+          "familyName": "Díaz Ayuso"
+        }
+      ],
+      "object": [
+        {
+          "@type": "MedicalOrganization",
+          "familyName": "Cruz Roja"
+        }
+      ],
+      "result": [
+        {
+          "@type": "Action",
+          "description": "campaña de vacunación contra la Covid19",
+          "result": [
+            {
+              "@type": "Action",
+              "description": "vacunación contra la Covid19",
+              "object": [
+                {
+                  "@type": "InfectiousDisease",
+                  "infectiousAgent": "Covid19"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "@context": {
+    "SocialMediaPosting": "http://schema.org/SocialMediaPosting",
+    "JobPosting": "http://schema.org/JobPosting",
+    "MedicalOrganization": "http://schema.org/MedicalOrganization",
+    "InfectiousDisease": "http://schema.org/InfectiousDisease",
+    "Action": "http://schema.org/Action",
+    "Person": "http://schema.org/Person",
+
+    "name": "http://schema.org/name",
+    "familyName": "http://schema.org/familyName",
+    "description": "http://schema.org/description",
+    "title": "http://schema.org/title",
+    "wordCount": "http://schema.org/wordCount",
+    "about": "http://schema.org/about",
+    "url": "http://schema.org/url",
+    "articleBody": "http://schema.org/articleBody",
+    "discussionUrl": "http://schema.org/discussionUrl",
+    "datePosted": "http://schema.org/datePosted",
+    "jobStartDate": "http://schema.org/jobStartDate",
+    "jobImmediateStart": "http://schema.org/jobImmediateStart",
+    "educationRequirements": "http://schema.org/educationRequirements",
+    "hiringOrganization": "http://schema.org/hiringOrganization",
+    "result": "http://schema.org/result",
+    "agent": "http://schema.org/agent",
+    "object": "http://schema.org/object",
+    "potentialAction": "http://schema.org/potentialAction",
+    "infectiousAgent": "http://schema.org/infectiousAgent"
+  }
+}
