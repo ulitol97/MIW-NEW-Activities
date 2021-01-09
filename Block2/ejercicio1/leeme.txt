@@ -1,0 +1,10 @@
+- Microdata: se anota con microdatos el marcado HTML de:
+  -> El tweet en https://twitter.com/marianofake/status/1346397080739262464
+  -> Los dos primeros párrafos de la noticia en https://www.rtve.es/noticias/20210106/coronavirus-reunion-ema-para-evaluar-vacuna-moderna/2062537.shtml
+
+- JSON-LD:
+  -> Se crean los documentos JSON con la misma información anotada con microdatos anteriormente.
+
+- El validador de Google (https://search.google.com/structured-data/testing-tool)
+  da algunas warnings ya que hay información que no tenemos.
+
