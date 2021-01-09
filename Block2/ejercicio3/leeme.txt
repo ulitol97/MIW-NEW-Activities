@@ -1,0 +1,3 @@
+En este ejercicio, por comodidad, el cliente y el servidor ficticio conviven en la misma máquina.
+
+

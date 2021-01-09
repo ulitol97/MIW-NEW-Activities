@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UO251436 - ejercicio 3 (client)</title>
+
+    <link rel="stylesheet" href="styles/container.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="text">
+        <section>
+          <h1>UO251436 - Ejercicio 3 "Nuevos estándares en la web".</h1>
+          <p>
+            El propósito del ejercicio es mandar un mensaje a un servidor de
+            imágenes "falso".
+          </p>
+          <p>
+            Una vez recibido el mensaje, el servidor de imágenes responderá con
+            la url de una imagen que se mostrará a continuación (las imágenes se
+            obtienen de
+            <a
+              href="https://picsum.photos/"
+              rel="noreferrer noopener"
+              target="_blank"
+              >picsum</a
+            >).
+          </p>
+
+          <p>
+            El mensaje enviado será el
+            <span class="italic">timestamp</span> actual (sólo los segundos),
+            que el servidor utilizará para devolver una url u otra.
+          </p>
+          <button id="newBtn">Enviar nuevos datos al servidor</button>
+        </section>
+        <!--
+        El iframe contiene la página del servidor capaz de recibir nuestros mensajes y responder con la URL de una imagen.
+        La página del servidor vive en una de las máquinas del máster,
+        así que no funcionará sin acceso a la red de la universidad.
+      -->
+        <iframe id="iframe" src="iframe.html"></iframe>
+      </div>
+      <div id="img">
+        <img alt="server image" src="img/placeholder.jpg" />
+      </div>
+    </div>
+    <!-- Script con la funcionalidad del cliente -->
+    <script src="js/container.js"></script>
+  </body>
+</html>

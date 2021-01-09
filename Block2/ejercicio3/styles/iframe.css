@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap");
+
+:root {
+  --main-elements-separation: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  border: 1px solid black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#main {
+  height: 100vh;
+  padding: var(--main-elements-separation);
+}
