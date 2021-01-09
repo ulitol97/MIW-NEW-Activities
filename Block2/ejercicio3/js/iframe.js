@@ -15,7 +15,6 @@ function log(message) {
 /* Al recibir datos del cliente, devolver la URL de una imagen de picsum según el segundo de la fecha
  recibida del cliente */
 window.addEventListener("message", receiveData, false);
-
 function receiveData(data) {
   data = data.data;
   log(`Datos recibidos:${data} desde el cliente`);
@@ -26,7 +25,7 @@ function receiveData(data) {
   updateUI(data, imageUrl);
 }
 
-// Update the iframe with the data received
+// Actualizar el texto del iframe para mostrar que ha interactuado con el cliente
 function updateUI(data, url) {
   dataText.innerHTML = data;
 

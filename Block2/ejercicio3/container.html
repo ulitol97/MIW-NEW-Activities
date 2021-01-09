@@ -16,11 +16,11 @@
           <h1>UO251436 - Ejercicio 3 "Nuevos estándares en la web".</h1>
           <p>
             El propósito del ejercicio es mandar un mensaje a un servidor de
-            imágenes "falso".
+            imágenes "falso" cuyo código se ejecuta al invocarlo en el <span class="italic">iframe</span> de abajo (creado al vuelo mediante JS).
           </p>
           <p>
             Una vez recibido el mensaje, el servidor de imágenes responderá con
-            la url de una imagen que se mostrará a continuación (las imágenes se
+            la URL de una imagen que se mostrará a continuación (las imágenes se
             obtienen de
             <a
               href="https://picsum.photos/"
@@ -31,9 +31,9 @@
           </p>
 
           <p>
-            El mensaje enviado será el
+            El mensaje enviado al servidor será el
             <span class="italic">timestamp</span> actual (sólo los segundos),
-            que el servidor utilizará para devolver una url u otra.
+            que el servidor utilizará para devolver una URL u otra.
           </p>
           <button id="newBtn">Enviar nuevos datos al servidor</button>
         </section>
@@ -42,7 +42,6 @@
         La página del servidor vive en una de las máquinas del máster,
         así que no funcionará sin acceso a la red de la universidad.
       -->
-        <iframe id="iframe" src="iframe.html"></iframe>
       </div>
       <div id="img">
         <img alt="server image" src="img/placeholder.jpg" />

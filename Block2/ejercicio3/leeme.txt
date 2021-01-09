@@ -1,3 +1,11 @@
-En este ejercicio, por comodidad, el cliente y el servidor ficticio conviven en la misma máquina.
+Se adjuntan todos los ficheros del ejercicio aunque el "iframe.html" y sus recursos están desplegados
+externamente.
 
+El servidor de imágenes (iframe) está desplegado en una de las máquinas de la Universidad,
+concretamente en http://156.35.95.118:8083/exercise3/iframe.html.
 
+Por tanto, para hacer funcionar el ejercicio sin fallos es necesario tener una conexión
+con acceso a la red la Universidad y abrir el fichero "container.html" directamente o desde un
+servidor local.
+
+El ejercicio es similar al de clase, pero contiene comentarios explicativos en el código por si acaso.
