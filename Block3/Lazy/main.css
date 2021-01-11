@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  padding: 0 15px;
+}
+
+#main {
+  width: 90%;
+  margin: 10px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.wrapper {
+  border: 1px solid black;
+  margin: auto;
+  width: 25vw;
+  height: 25vw;
+}
+
+img {
+  /* Images must fill some minimal space even while the SRC is loading to prevent the intersector from triggering */
+  width: 100%;
+  height: 100%;
+}
