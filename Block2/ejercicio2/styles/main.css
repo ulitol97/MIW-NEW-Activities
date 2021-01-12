@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-
+:root {
   --blue-bg-color: rgba(89, 138, 235, 0.4);
   --red-bg-color: rgba(217, 140, 126, 0.5);
+}
 
+body {
   width: 100%;
   padding: 0 15px;
   height: 100vh;
@@ -29,7 +29,28 @@ h1 {
 
 h5 {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+#config button {
+  margin: auto 5px;
+  padding: 2px 5px;
+  font-size: 1.1rem;
+}
+
+input:not([type="text"]),
+button {
+  cursor: pointer;
+}
+
+input[type="text"]{
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input[disabled] {
+  cursor: not-allowed;
 }
 
 /* Custom elements */
@@ -49,13 +70,49 @@ h5 {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 #status {
   text-align: center;
 }
+
+#config {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  max-width: 500px;
+}
+
+#config > * {
+  padding: 15px;
+}
+
+#user-inputs {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 1.2rem;
+}
+
+#user-inputs > * {
+  width: 100%;
+  margin: 5px;
+}
+
+/* #slider-box {
+  display: flex;
+  flex-wrap: nowrap;
+} */
 
 .border {
   border: 1px solid black;
