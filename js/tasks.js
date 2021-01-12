@@ -18,12 +18,12 @@ function createTask(taskInfo) {
   // Store the task if it is not a rest
 }
 
-function isValidTask(taskInfo) {
-  if (!taskInfo.name || taskInfo.name.length == 0) {
+function isValidTask(task) {
+  if (task.type == taskTypes.work && (!task.name || task.name.length == 0)) {
     setError("Nombre de tarea inválido");
     return false;
   }
-  if (!taskInfo.length || taskInfo.length < 1) {
+  if (!task.length || task.length < 1) {
     setError("Duración de tarea inválida");
     return false;
   }

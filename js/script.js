@@ -2,7 +2,7 @@
 let countdownWorker;
 
 const pomodoroStates = {
-  running: "En marcha",
+  running: "Trabajando",
   rest: "Descanso",
   paused: "Pausa",
 };

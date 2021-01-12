@@ -20,11 +20,10 @@ self.addEventListener(
   "message",
   (message) => {
     if (typeof message.data === "number") {
-      countdown(message.data);
+      postMessage(message.data);
+      // countdown(message.data);
+      countdown(5);
     }
   },
   false
 );
-
-// Countdown 10 example
-// countdown(sliderElement.value);
