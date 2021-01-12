@@ -33,7 +33,7 @@ addImages(initialImages);
 
 const options = {
   rootMargin: "0px",
-  threshold: 0, // Trigger callback immediately
+  threshold: 0, // Trigger immediately
 };
 
 const callback = (entries, observer) => {
