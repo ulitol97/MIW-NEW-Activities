@@ -1,3 +1,5 @@
+// Application startup and UI manament
+
 // First check if the technologies we will use are supported
 function sanityCheck() {
   const errors = [];
@@ -25,9 +27,9 @@ function setUp() {
 }
 
 function onmessageReceived(message) {
-  console.info(message.data);
-  if (typeof message.data === "string") {
-    timeElement.innerText = message.data;
+  console.info(typeof message.data);
+  if (typeof message.data === "number") {
+    updateTimer(message.data);
   } else {
   }
 }
@@ -38,17 +40,19 @@ sanityCheck();
 const pomodoroStates = { running: "En marcha", paused: "Pause" };
 Object.freeze(pomodoroStates);
 
-const timeElement = document.getElementById("time");
-const stateElement = document.getElementById("state");
-
-const sliderElement = document.getElementById("slider");
-const sliderValueElement = document.getElementById("slider-value");
-sliderValueElement.innerText = sliderElement.value;
-sliderElement.oninput = () =>
-  (sliderValueElement.innerText = sliderElement.value);
-
 const btnStart = document.getElementById("start");
 const btnStop = document.getElementById("stop");
 
-btnStart.addEventListener("click", (e) => e.preventDefault());
+btnStart.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // Start new task given its name and length
+  const taskInfo = {
+    name: taskNameElement.value.trim(),
+    length: sliderElement.value,
+  };
+  createTask(taskInfo);
+
+  console.info(taskNameElement.value, sliderElement.value);
+});
 btnStop.addEventListener("click", (e) => e.preventDefault());
