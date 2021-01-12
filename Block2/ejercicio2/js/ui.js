@@ -1,4 +1,5 @@
 // UI Management
+const root = document.documentElement;
 
 const timeElement = document.getElementById("time");
 const stateElement = document.getElementById("state");
@@ -42,25 +43,79 @@ function setError(err) {
 // State
 function setStateUi(state) {
   // Update text
-  stateElement.innerText = state;
 
   // Update colors
   // Update enabled/disabled elements
   switch (state) {
     case pomodoroStates.paused:
-      updateTimer(0);
-      btnStart.removeAttribute("disabled");
-      btnStop.setAttribute("disabled", "disabled");
+      uiPaused();
       break;
     case pomodoroStates.running:
-      btnStart.setAttribute("disabled", "disabled");
-      btnStop.removeAttribute("disabled");
+      uiRunnning();
       break;
     case pomodoroStates.rest:
-      btnStart.setAttribute("disabled", "disabled");
-      btnStop.removeAttribute("disabled");
+      uiRest();
       break;
     default:
       break;
   }
+}
+
+function uiPaused() {
+  updateTimer(0);
+
+  const nextIsRest =
+    typeof currentTask !== "undefined"
+      ? currentTask.type == taskTypes.rest
+        ? false
+        : true
+      : false;
+
+  stateElement.innerText = nextIsRest
+    ? "Hora de descansar"
+    : "Hora de trabajar";
+
+  changeSliderRange(nextIsRest ? 5 : 25);
+
+  if (!nextIsRest) taskNameElement.removeAttribute("disabled");
+
+  nextIsRest ? changeTheme("rest") : changeTheme("work");
+
+  sliderElement.removeAttribute("disabled");
+  btnStart.removeAttribute("disabled");
+  btnStop.setAttribute("disabled", "disabled");
+}
+
+function uiRunnning() {
+  stateElement.innerText = pomodoroStates.running;
+
+  taskNameElement.value = "";
+  taskNameElement.setAttribute("disabled", "disabled");
+
+  sliderElement.setAttribute("disabled", "disabled");
+
+  btnStart.setAttribute("disabled", "disabled");
+  btnStop.removeAttribute("disabled");
+}
+
+function uiRest() {
+  stateElement.innerText = pomodoroStates.rest;
+
+  taskNameElement.value = "";
+  taskNameElement.setAttribute("disabled", "disabled");
+
+  sliderElement.setAttribute("disabled", "disabled");
+
+  btnStart.setAttribute("disabled", "disabled");
+  btnStop.removeAttribute("disabled");
+}
+
+function changeSliderRange(max) {
+  sliderElement.setAttribute("max", max);
+  sliderElement.value = max;
+  sliderValueElement.innerText = max;
+}
+
+function changeTheme(theme) {
+  root.setAttribute("theme", theme);
 }

@@ -7,8 +7,11 @@
 }
 
 :root {
-  --blue-bg-color: rgba(89, 138, 235, 0.4);
-  --red-bg-color: rgba(217, 140, 126, 0.5);
+  --bg-color: rgba(217, 140, 126, 0.8);
+}
+
+[theme="rest"] {
+  --bg-color: rgba(89, 138, 235, 0.4);
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   padding: 0 15px;
   height: 100vh;
 
-  background-color: var(--blue-bg-color);
+  background-color: var(--bg-color);
 
   font-family: "Roboto", sans-serif;
 }
