@@ -10,10 +10,35 @@
     <div id="main">
       <section class="half">
         <div id="status">
-          <h5 id="info">Paused</h5>
+          <h5 id="state">Paused</h5>
           <h1 id="time">00:00</h1>
         </div>
-        <div id="config" class="border">Form...</div>
+        <form id="config">
+          <div id="user-inputs">
+            <input
+              type="text"
+              id="taskname"
+              name="taskname"
+              autofocus
+              autocomplete="off"
+              maxlength="100"
+              placeholder="Tarea..."
+            />
+            <input
+              id="slider"
+              type="range"
+              min="1"
+              max="25"
+              step="1"
+              value="25"
+            />
+            <div><span id="slider-value">25</span> minuto(s)</div>
+          </div>
+          <div id="controls">
+            <button id="stop">Parar</button>
+            <button id="start">Empezar</button>
+          </div>
+        </form>
       </section>
       <hr class="border" />
       <section class="half">
