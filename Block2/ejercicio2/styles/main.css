@@ -32,7 +32,7 @@ body {
 /* Base elements */
 
 h1 {
-  font-size: 6.5rem;
+  font-size: 5rem;
 }
 
 h5 {
@@ -48,7 +48,7 @@ h5 {
 }
 
 input:not([type="text"]),
-button {
+button:not([disabled]) {
   cursor: pointer;
 }
 
@@ -92,7 +92,7 @@ input[disabled] {
   justify-content: center;
   align-items: center;
 
-  width: 50%;
+  min-width: 50%;
   max-width: 500px;
 }
 

@@ -15,5 +15,16 @@ function countdown(n) {
   }, 1000);
 }
 
+// Trigger on message
+self.addEventListener(
+  "message",
+  (message) => {
+    if (typeof message.data === "number") {
+      countdown(message.data);
+    }
+  },
+  false
+);
+
 // Countdown 10 example
-countdown(5);
+// countdown(sliderElement.value);

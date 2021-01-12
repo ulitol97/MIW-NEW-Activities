@@ -1,12 +1,24 @@
 // Task management in indexed BD
+let currentTask;
+const taskStates = {
+  running: "En marcha",
+  canceled: "Cancelada",
+  finished: "Finalizada",
+};
+Object.freeze(taskStates);
+const taskTypes = {
+  work: "work",
+  rest: "rest",
+};
+Object.freeze(taskTypes);
 
 function createTask(taskInfo) {
-  if (!isValidTask(taskInfo)) return;
-  console.info("Creating task: ", taskInfo);
+  currentTask = taskInfo;
+
+  // Store the task if it is not a rest
 }
 
 function isValidTask(taskInfo) {
-  console.log(taskInfo);
   if (!taskInfo.name || taskInfo.name.length == 0) {
     setError("Nombre de tarea inválido");
     return false;

@@ -1,4 +1,16 @@
 // Application startup and UI manament
+let countdownWorker;
+
+const pomodoroStates = {
+  running: "En marcha",
+  rest: "Descanso",
+  paused: "Pausa",
+};
+Object.freeze(pomodoroStates);
+let pomodoroState = pomodoroStates.paused;
+
+const btnStart = document.getElementById("start");
+const btnStop = document.getElementById("stop");
 
 // First check if the technologies we will use are supported
 function sanityCheck() {
@@ -21,38 +33,69 @@ function showErrors(errors) {
 }
 
 function setUp() {
-  console.info("Inicializando pomodoro");
-  const countdownWorker = new Worker("js/counter.js");
+  console.info("Iniciando pomodoro");
+  setState(pomodoroStates.paused);
+}
+
+// Start new task given the data collected from the user
+function startTask() {
+  const task = {
+    name: taskNameElement.value.trim(),
+    length: sliderElement.value * 60, // Length in seconds
+    date: new Date(),
+    type: !currentTask
+      ? taskTypes.work
+      : currentTask.type == taskTypes.rest
+      ? taskTypes.work
+      : taskTypes.rest,
+  };
+  if (!isValidTask(task)) return;
+
+  // Start countdown worker
+  countdownWorker = new Worker("js/counter.js");
   countdownWorker.onmessage = onmessageReceived;
+  countdownWorker.postMessage(task.length);
+
+  // Store the task
+  createTask(task);
+
+  // Adapt UI
+  setState(
+    task.type == taskTypes.work ? pomodoroStates.running : pomodoroStates.rest
+  );
+  console.info("Creada la tarea: ", task);
+}
+
+function stopTask() {
+  if (!currentTask) return;
+  // Kill worker and return to paused
+  countdownWorker.terminate();
+  setState(pomodoroStates.paused);
+  console.info("Detenida la tarea: ", currentTask);
 }
 
 function onmessageReceived(message) {
-  console.info(typeof message.data);
   if (typeof message.data === "number") {
     updateTimer(message.data);
   } else {
+    stopTask();
   }
+}
+
+function setState(state) {
+  pomodoroState = state;
+  setStateUi(state);
 }
 
 // App entrypoint
 sanityCheck();
 
-const pomodoroStates = { running: "En marcha", paused: "Pause" };
-Object.freeze(pomodoroStates);
-
-const btnStart = document.getElementById("start");
-const btnStop = document.getElementById("stop");
-
 btnStart.addEventListener("click", (e) => {
   e.preventDefault();
-
-  // Start new task given its name and length
-  const taskInfo = {
-    name: taskNameElement.value.trim(),
-    length: sliderElement.value,
-  };
-  createTask(taskInfo);
-
-  console.info(taskNameElement.value, sliderElement.value);
+  startTask();
 });
-btnStop.addEventListener("click", (e) => e.preventDefault());
+
+btnStop.addEventListener("click", (e) => {
+  e.preventDefault();
+  stopTask();
+});
