@@ -38,3 +38,29 @@ function setError(err) {
     errorElement.innerText = err.toString();
   }
 }
+
+// State
+function setStateUi(state) {
+  // Update text
+  stateElement.innerText = state;
+
+  // Update colors
+  // Update enabled/disabled elements
+  switch (state) {
+    case pomodoroStates.paused:
+      updateTimer(0);
+      btnStart.removeAttribute("disabled");
+      btnStop.setAttribute("disabled", "disabled");
+      break;
+    case pomodoroStates.running:
+      btnStart.setAttribute("disabled", "disabled");
+      btnStop.removeAttribute("disabled");
+      break;
+    case pomodoroStates.rest:
+      btnStart.setAttribute("disabled", "disabled");
+      btnStop.removeAttribute("disabled");
+      break;
+    default:
+      break;
+  }
+}
