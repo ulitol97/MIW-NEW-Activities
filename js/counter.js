@@ -22,7 +22,7 @@ self.addEventListener(
     if (typeof message.data === "number") {
       postMessage(message.data);
       // countdown(message.data);
-      countdown(5);
+      countdown(3);
     }
   },
   false

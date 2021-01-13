@@ -58,9 +58,10 @@ button:not([disabled]) {
 input[type="text"] {
   padding: 5px;
   font-size: 1rem;
+  outline: none;
 }
 
-input[disabled] {
+input:disabled, button:disabled {
   cursor: not-allowed;
 }
 

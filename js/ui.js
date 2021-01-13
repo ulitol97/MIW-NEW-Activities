@@ -1,6 +1,9 @@
 // UI Management
 const root = document.documentElement;
 
+const sessionTaskDuration = "sessionTaskDuration";
+const sessionRestDuration = "sessionRestDuration";
+
 const timeElement = document.getElementById("time");
 const stateElement = document.getElementById("state");
 
@@ -51,9 +54,11 @@ function setStateUi(state) {
       uiPaused();
       break;
     case pomodoroStates.running:
+      sessionStorage.setItem(sessionTaskDuration, sliderElement.value);
       uiRunnning();
       break;
     case pomodoroStates.rest:
+      sessionStorage.setItem(sessionRestDuration, sliderElement.value);
       uiRest();
       break;
     default:
@@ -71,17 +76,22 @@ function uiPaused() {
         : true
       : false;
 
+  // Info message above time
   stateElement.innerText = nextIsRest
     ? "Hora de descansar"
     : "Hora de trabajar";
 
-  changeSliderRange(nextIsRest ? 5 : 25);
-
+  // Task name input
   if (!nextIsRest) taskNameElement.removeAttribute("disabled");
 
+  // Slider
+  sliderElement.removeAttribute("disabled");
+  changeSliderRange(nextIsRest ? 5 : 25, nextIsRest);
+
+  // Background
   nextIsRest ? changeTheme("rest") : changeTheme("work");
 
-  sliderElement.removeAttribute("disabled");
+  // Buttons
   btnStart.removeAttribute("disabled");
   btnStop.setAttribute("disabled", "disabled");
 }
@@ -110,10 +120,17 @@ function uiRest() {
   btnStop.removeAttribute("disabled");
 }
 
-function changeSliderRange(max) {
+function changeSliderRange(max, nextIsRest) {
   sliderElement.setAttribute("max", max);
-  sliderElement.value = max;
-  sliderValueElement.innerText = max;
+
+  // Remember last value marked by user
+  const sliderValue =
+    (nextIsRest
+      ? sessionStorage.getItem(sessionRestDuration)
+      : sessionStorage.getItem(sessionTaskDuration)) || max;
+
+  sliderElement.value = sliderValue;
+  sliderValueElement.innerText = sliderValue;
 }
 
 function changeTheme(theme) {
