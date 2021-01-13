@@ -125,7 +125,7 @@ function showNotification(task) {
           ? "A por la siguiente tarea"
           : `Hora de un descanso`
       }`,
-      icon: "res/notification-icon.png",
+      icon: "/res/notification-icon.png",
       tag: notificationTag,
     };
     const notification = new Notification(title, options);
