@@ -15,6 +15,8 @@ sliderValueElement.innerText = sliderElement.value;
 sliderElement.oninput = () =>
   (sliderValueElement.innerText = sliderElement.value);
 
+const tasksElement = document.getElementById("tasklist-body");
+
 const errorElement = document.getElementById("error");
 
 // Timer

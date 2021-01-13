@@ -1,5 +1,7 @@
 // Task management in indexed BD
+
 let currentTask;
+
 const taskStates = {
   running: "En marcha",
   canceled: "Cancelada",
@@ -30,4 +32,8 @@ function isValidTask(task) {
 
   setError(null);
   return true;
+}
+
+function loadTasks(){
+
 }

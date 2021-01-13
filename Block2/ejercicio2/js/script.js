@@ -40,6 +40,7 @@ function setUp() {
 // Start new task given the data collected from the user
 function startTask() {
   const task = {
+    id: currentTask ? currentTask.id + 1 : 0,
     name: taskNameElement.value.trim(),
     length: sliderElement.value * 60, // Length in seconds
     date: new Date(),
@@ -127,6 +128,7 @@ function showNotification(task) {
       }`,
       icon: "/res/notification-icon.png",
       tag: notificationTag,
+      renotify: true,
     };
     const notification = new Notification(title, options);
 
