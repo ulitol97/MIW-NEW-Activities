@@ -16,6 +16,7 @@ sliderElement.oninput = () =>
   (sliderValueElement.innerText = sliderElement.value);
 
 const tasksElement = document.getElementById("tasklist-body");
+const taskExampleElement = document.getElementById("task-sample");
 
 const errorElement = document.getElementById("error");
 
@@ -43,6 +44,43 @@ function setError(err) {
     errorElement.classList.remove("invisible");
     errorElement.innerText = err.toString();
   }
+}
+
+// Tasks
+function addTaskUi(task) {
+  taskExampleElement.remove();
+
+  const taskRow = document.createElement("tr");
+  taskRow.setAttribute("id", `task-${task.id}`);
+
+  const name = document.createElement("td");
+  name.innerText = task.name;
+  taskRow.appendChild(name);
+  task.length / 60;
+
+  const date = document.createElement("td");
+  date.innerText = dateToString(task.date);
+  taskRow.appendChild(date);
+
+  const length = document.createElement("td");
+  length.innerText = `${task.length / 60} minutos`;
+  taskRow.appendChild(length);
+
+  const status = document.createElement("td");
+  status.classList.add("task-status");
+  status.innerText = task.status;
+  taskRow.appendChild(status);
+
+  tasksElement.prepend(taskRow);
+}
+
+function endTaskUi(task, manually) {
+  const taskElement = document.getElementById(`task-${task.id}`);
+  const taskStatusElement = taskElement.querySelector(".task-status");
+
+  taskStatusElement.innerText = manually
+    ? taskStates.canceled
+    : taskStates.finished;
 }
 
 // State
@@ -137,4 +175,15 @@ function changeSliderRange(max, nextIsRest) {
 
 function changeTheme(theme) {
   root.setAttribute("theme", theme);
+}
+
+// Aux
+function dateToString(date) {
+  return `${date.toLocaleDateString("es-ES")} ${leadingZeroes(
+    date.getHours()
+  )}:${leadingZeroes(date.getMinutes())}:${leadingZeroes(date.getSeconds())}`;
+}
+
+function leadingZeroes(n) {
+  return n >= 0 && n < 10 ? "0" + n : n;
 }

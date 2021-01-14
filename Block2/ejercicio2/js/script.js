@@ -40,7 +40,7 @@ function setUp() {
 // Start new task given the data collected from the user
 function startTask() {
   const task = {
-    id: currentTask ? currentTask.id + 1 : 0,
+    id: nextTaskId(),
     name: taskNameElement.value.trim(),
     length: sliderElement.value * 60, // Length in seconds
     date: new Date(),
@@ -65,19 +65,32 @@ function startTask() {
   setState(
     task.type == taskTypes.work ? pomodoroStates.running : pomodoroStates.rest
   );
-  console.info("Creada la tarea: ", task);
+  console.info(
+    `${
+      task.type == taskTypes.work ? "Creada la tarea" : "Creado el descanso"
+    }: `,
+    task
+  );
 }
 
 function stopTask(manually) {
   if (!currentTask) return;
 
-  // Edit task state
-  currentTask.status = manually ? taskStates.canceled : taskStates.finished;
+  // End task: logic and ui
+  endTask(currentTask, manually);
 
   // Kill worker and return to paused
   countdownWorker.terminate();
   setState(pomodoroStates.paused);
-  console.info("Detenida la tarea: ", currentTask);
+
+  console.info(
+    `${
+      currentTask.type == taskTypes.work
+        ? "Detenida la tarea"
+        : "Detenido el descanso"
+    }: `,
+    currentTask
+  );
 
   // Notification
   if (manually) return;
