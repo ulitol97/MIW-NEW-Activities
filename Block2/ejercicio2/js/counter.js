@@ -21,8 +21,7 @@ self.addEventListener(
   (message) => {
     if (typeof message.data === "number") {
       postMessage(message.data);
-      // countdown(message.data);
-      countdown(3);
+      countdown(message.data);
     }
   },
   false
