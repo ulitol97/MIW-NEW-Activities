@@ -43,6 +43,10 @@ h1 {
 h5 {
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+h5,
+.task-status {
   text-transform: uppercase;
 }
 
@@ -127,16 +131,21 @@ button:disabled {
 /* Lower half */
 
 #tasklist {
+  width: 100%;
   height: 100%;
+
+  display: flex;
+  justify-content: center;
+
   font-size: 1.1rem;
 
   overflow: auto;
 }
 
 table {
+  width: 100%;
   border-collapse: collapse;
 }
-
 
 thead th {
   box-shadow: inset 0px -1px #000;
