@@ -126,7 +126,7 @@ function uiPaused() {
 
   // Slider
   sliderElement.removeAttribute("disabled");
-  changeSliderRange(nextIsRest ? 5 : 25, nextIsRest);
+  changeSliderRange(nextIsRest ? 3 : 1, nextIsRest ? 5 : 25, nextIsRest);
 
   // Background
   nextIsRest ? changeTheme("rest") : changeTheme("work");
@@ -160,7 +160,8 @@ function uiRest() {
   btnStop.removeAttribute("disabled");
 }
 
-function changeSliderRange(max, nextIsRest) {
+function changeSliderRange(min, max, nextIsRest) {
+  sliderElement.setAttribute("min", min);
   sliderElement.setAttribute("max", max);
 
   // Remember last value marked by user

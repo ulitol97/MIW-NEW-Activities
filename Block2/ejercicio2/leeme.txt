@@ -1,0 +1,28 @@
+El ejercicio está desplegado en: https://ulitol97.github.io/MIW-NEW-Activities/
+
+Se adjuntan todos los ficheros del ejercicio. Para que funcione, es necesario lanzar la página en un servidor web local.
+Dado que la API de notificaciones requiere HTTPS, se ha desplegado el ejercicio en GitHub Pages.
+
+Notas generales sobre el ejercicio:
+  - Se puede dar un nombre y una duración (dentro de unos límites) a las tareas. No se aceptan nombres repetidos.
+  - Se alternan los períodos de trabajo (1 a 25 minutos) y descanso (3 a 5 minutos).
+  - El código está dividido en varios scripts:
+    => tasks.js: lidia con la creación y modificación de los objetos tarea y el accesso a localStorage.
+    => counter.js: utilidades para, dada una cantidad de tiempo, iniciar la cuenta atrás de una tarea.
+    => script.js: inicializa y coordina los distintos elementos.
+    => ui.js: operaciones sobre los elementos del DOM para actualizar la interfaz.
+
+Notas técnicas sobre el ejercicio:
+  - WebWorkers:
+    => Cuando se lanza una tarea, se invoca un WebWorker para que ejecute "counter.js" y se le pasa por mensaje la duración de la tarea.
+    => El WebWorker lleva el control de los tiempos. Cada segundo manda un mensaje al hilo principal para actualizar o detener el contador.
+
+  - LocalStorage:
+    => Se almacena un array de tareas con la clave "tasks".
+    => LocalStorage sólo admite strings así que se usan JSON stringify/parse para guardar/recuperar las tareas.
+
+  - SessionStorage: almacena cuánto duraron la última tarea y el último descanso del usuario, para marcar ese valor por defecto la próxima vez.
+
+  - Notifications API:
+    => Notificaciones al acabar una tarea o descanso. Pulsar en la notificación nos lleva a la página del pomodoro.
+    => Se pide permiso para notificar al usuario si es necesario.
