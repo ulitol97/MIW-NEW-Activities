@@ -1,79 +1,117 @@
 <!DOCTYPE html>
 <html lang="es-ES">
- <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carry Toast Games</title>
-  <link rel="stylesheet" title="home" href="css/base.css">
-  <link rel="stylesheet" title="home" href="css/nav.css">
-  <link rel="stylesheet" title="home" href="css/footer.css">
-  <link rel="stylesheet" title="home" href="css/home.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- </head>
- <body>
-		<div class="wrapper">
-			<nav>
-				<figure class="brand no-select"><a href="/index.html"><img src="media/logo-xs.png" alt="Carry Toast Logo (home)"/></a></figure>
-				<input type="checkbox" id="nav" class="hidden"/>
-				<label for="nav" class="nav-open no-select">&nbsp;</label>
-				<div class="nav-container">
-            <a href="/index.html"><img class="brand" src="media/logo.png" alt="Carry Toast Logo"/></a>
-            <ul>
-              <li><a href="/team.html">Equipo</a></li>
-              <li><a href="/objective.html">Objetivos</a></li>
-              <li><a href="/updates.html">Noticias</a></li>
-              <li><a href="/contact.html">Contacto</a></li>
-            </ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carry Toast Games</title>
+    <link rel="stylesheet" title="home" href="css/base.css" />
+    <link rel="stylesheet" title="home" href="css/nav.css" />
+    <link rel="stylesheet" title="home" href="css/footer.css" />
+    <link rel="stylesheet" title="home" href="css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script defer src="js/ui.js"></script>
+    <noscript>Necesitas activar Javascript para utilizar esta página.</noscript>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <figure class="brand no-select">
+          <a href="/index.html"
+            ><img src="media/logo-xs.png" alt="Carry Toast Logo (home)"
+          /></a>
+        </figure>
+        <div id="nav-toggle" class="nav-toggle no-select closed">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-			</nav>
-			<hr class="hidden"/>
-			<section class="intro">
-				<h1>
-					<q class="side-quote">Dejaremos de programar cuando los carritos floten</q>
-					<small> Sir Pulgar</small>
+        <div class="nav-container">
+          <a href="/index.html"
+            ><img class="brand" src="media/logo.png" alt="Carry Toast Logo"
+          /></a>
+          <ul>
+            <li><a href="/team.html">Equipo</a></li>
+            <li><a href="/objective.html">Objetivos</a></li>
+            <li><a href="/updates.html">Noticias</a></li>
+            <li><a href="/contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+      <hr class="hidden" />
+      <section class="intro">
+        <h1>
+          <q class="side-quote"
+            >Dejaremos de programar cuando los carritos floten</q
+          >
+          <small> Sir Pulgar</small>
         </h1>
-			</section>
-			<hr class="hidden"/>
-			<section class="main-content">
+      </section>
+      <hr class="hidden" />
+      <section class="main-content">
         <h1>Comunicado inaugural de Carry Toast</h1>
-				<article>
+        <article>
           <h2>¿Quiénes somos?</h2>
-					<ul>
-						<li class="bullet-chart">Somos un <a href="/team.html">equipo de jóvenes</a> universitarios que comparten un interés común
-							por la programación, los videojuegos y la cerveza.</li>
-						<li class="bullet-chart">Un buen día decidimos juntarnos para crear un estudio
-							de videojuegos indie. Tenemos <a href="/objective.html">varias metas en mente</a> pero siempre con la diversión como bandera.</li>
-					</ul>
-					<img class="brand" src="media/logo.png" alt="Carry Toast logo">
-				</article>
-			</section>
-			<aside class="side-content ">
+          <ul>
+            <li class="bullet-chart">
+              Somos un <a href="/team.html">equipo de jóvenes</a> universitarios
+              que comparten un interés común por la programación, los
+              videojuegos y la cerveza.
+            </li>
+            <li class="bullet-chart">
+              Un buen día decidimos juntarnos para crear un estudio de
+              videojuegos indie. Tenemos
+              <a href="/objective.html">varias metas en mente</a> pero siempre
+              con la diversión como bandera.
+            </li>
+          </ul>
+          <img class="brand" src="media/logo.png" alt="Carry Toast logo" />
+        </article>
+      </section>
+      <aside class="side-content">
         <div class="news-summary">
-          <h3><a href="/updates.html">Tenemos un nuevo proyecto en marcha</a></h3>
+          <h3>
+            <a href="/updates.html">Tenemos un nuevo proyecto en marcha</a>
+          </h3>
           <p></p>
-          <img class="news-image" src="media/dna3.png" alt="DNA">
+          <img class="news-image" src="media/dna3.png" alt="DNA" />
         </div>
         <div class="news-summary">
-          <h3><a href="/contact.html">Nuestro centro de reuniones en Logroño</a></h3>
+          <h3>
+            <a href="/contact.html">Nuestro centro de reuniones en Logroño</a>
+          </h3>
           <p></p>
-          <img class="news-image" src="media/beer.png" alt="Beer">
+          <img class="news-image" src="media/beer.png" alt="Beer" />
         </div>
       </aside>
       <footer class="footer">
-				<aside class="footer-text footer-info">
-					<p>Carry Toast es un equipo de desarrollo indie nacido en Logroño (España).</p>
-					<p>Unidos por el sabor de la cerveza de trigo, buscamos aportar nuestro granito de arena al mundo del videojuego.</p>
-				</aside>
-				<aside class="footer-text footer-copyright">
-					<p><a href="mailto:info.carrytoast@gmail.com">info.carrytoast@gmail.com</a></p>
-          <p>&#169; 2019 Carry Toast Studio</p>
+        <aside class="footer-text footer-info">
+          <p>
+            Carry Toast es un equipo de desarrollo indie nacido en Logroño
+            (España).
+          </p>
+          <p>
+            Unidos por el sabor de la cerveza de trigo, buscamos aportar nuestro
+            granito de arena al mundo del videojuego.
+          </p>
+        </aside>
+        <aside class="footer-text footer-copyright">
+          <p>
+            <a href="mailto:info.carrytoast@gmail.com"
+              >info.carrytoast@gmail.com</a
+            >
+          </p>
+          <p>&#169; <span id="year">2019</span> Carry Toast Studio</p>
           <div class="footer-social">
             <a href="#"><em class="fa fa-instagram"></em></a>
             <a href="#"><em class="fa fa-facebook-square"></em></a>
             <a href="#"><em class="fa fa-twitter"></em></a>
           </div>
-				</aside>
-			</footer>
-		</div>
- </body>
+        </aside>
+      </footer>
+    </div>
+  </body>
 </html>

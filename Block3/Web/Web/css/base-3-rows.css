@@ -33,7 +33,6 @@ footer {
 
 /* Small Desktop */
 @media screen and (max-width: 1024px) {
-
   .main-content ul {
     max-width: 80%;
   }
@@ -41,7 +40,6 @@ footer {
 
 /* Big mobile & tablet */
 @media screen and (max-width: 767px) {
-
   .main-content ul {
     max-width: 100%;
   }

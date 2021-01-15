@@ -17,9 +17,8 @@
 
   border-radius: 5%;
   border-bottom-style: solid;
-  border-bottom-color: #C7113D;
+  border-bottom-color: #c7113d;
   border-bottom-width: 2px;
-  
 }
 
 .team-card .card-image {
@@ -58,7 +57,7 @@
 }
 
 .team-card .card-social a em:hover {
-  color: #FF6380;
+  color: #ff6380;
 }
 
 /* Small Desktop */
@@ -70,7 +69,6 @@
 
 /* Big mobile & tablet */
 @media screen and (max-width: 767px) {
-
   .card-container {
     flex-direction: column;
   }

@@ -7,7 +7,6 @@
 
 /* Big mobile & tablet */
 @media screen and (max-width: 767px) {
-
   iframe {
     height: 315px;
   }
