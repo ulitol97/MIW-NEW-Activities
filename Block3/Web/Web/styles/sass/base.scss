@@ -13,11 +13,17 @@ html {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 0;
+  z-index: 9999;
 }
 
 .no-select {
-  user-select: none;
+  user-select: none !important;
 }
 
 body {
@@ -95,7 +101,6 @@ body {
   .brand {
     display: block;
     margin: auto;
-    margin-bottom: -40px;
     max-width: 60%;
   }
 

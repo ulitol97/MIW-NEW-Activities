@@ -72,42 +72,56 @@ nav ul li .active {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 120%;
+    height: 100%;
     width: 100%;
     z-index: -1;
     background: #1f2227;
     opacity: 0;
+    pointer-events: none;
     transition: all 0.2s ease;
+    box-sizing: border-box;
+    padding: 10% 0;
   }
-  .nav-container .brand {
+  .nav-container .nav-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-container .nav-container-wrapper > * {
+    width: 50%;
+  }
+  .nav-container .nav-container-wrapper figure {
+    width: 50%;
+    margin: 0;
+  }
+  .nav-container .nav-container-wrapper figure img {
+    width: 100%;
+  }
+  .nav-container .nav-container-wrapper .brand {
     display: initial;
-    position: absolute;
-    top: 18%;
-    max-width: 55%;
     transform: translateX(-100px);
     transition: transform 0.6s ease-out;
     z-index: 1;
+    box-sizing: border-box;
+    padding: 15px;
   }
-  .nav-container ul {
+  .nav-container .nav-container-wrapper ul {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 25%;
-    width: 100%;
     padding: 5px 5px;
-    transform: translateY(-50%);
+    padding-block: 0;
+    padding-inline: 0;
+    margin-block: 0;
+    margin-inline: 0;
   }
-  .nav-container ul li {
-    display: block;
-    float: none;
+  .nav-container .nav-container-wrapper ul li {
     text-align: right;
+    width: 100%;
     margin: 5px 5px;
     padding: 10px 5px;
     transition: transform 0.25s ease-out;
   }
-  .nav-container ul li a {
+  .nav-container .nav-container-wrapper ul li a {
     padding: 10px 25px;
     opacity: 0;
     color: #ff304c;
@@ -119,38 +133,38 @@ nav ul li .active {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
-  .nav-container ul li a {
+  .nav-container .nav-container-wrapper ul li a {
     font-size: 24px;
     transition: all 0.2s ease;
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:hover {
+  .nav-container .nav-container-wrapper ul li:hover {
     transform: translateX(-8%);
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:nth-child(1) a {
+  .nav-container .nav-container-wrapper ul li:nth-child(1) a {
     transition-delay: 0.2s;
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:nth-child(2) a {
+  .nav-container .nav-container-wrapper ul li:nth-child(2) a {
     transition-delay: 0.3s;
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:nth-child(3) a {
+  .nav-container .nav-container-wrapper ul li:nth-child(3) a {
     transition-delay: 0.4s;
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:nth-child(4) a {
+  .nav-container .nav-container-wrapper ul li:nth-child(4) a {
     transition-delay: 0.5s;
   }
 }
 @media screen and (max-width: 768px) {
-  .nav-container ul li:not(:first-child) {
+  .nav-container .nav-container-wrapper ul li:not(:first-child) {
     margin-left: 0;
   }
 }
@@ -182,6 +196,7 @@ nav ul li .active {
   .nav-toggle.open + .nav-container {
     z-index: 9990;
     opacity: 1;
+    pointer-events: all;
   }
   .nav-toggle.open + .nav-container .brand {
     transform: translateX(0px);

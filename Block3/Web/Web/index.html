@@ -18,27 +18,31 @@
   </head>
   <body>
     <div class="wrapper">
-      <nav>
+      <nav class="sticky">
         <figure class="brand no-select">
           <a href="/index.html"
             ><img src="media/logo-xs.png" alt="Carry Toast Logo (home)"
           /></a>
         </figure>
         <div id="nav-toggle" class="nav-toggle no-select closed">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="nav-container">
-          <a href="/index.html"
-            ><img class="brand" src="media/logo.png" alt="Carry Toast Logo"
-          /></a>
-          <ul>
-            <li><a href="/team.html">Equipo</a></li>
-            <li><a href="/objective.html">Objetivos</a></li>
-            <li><a href="/updates.html">Noticias</a></li>
-            <li><a href="/contact.html">Contacto</a></li>
-          </ul>
+          <div class="nav-container-wrapper">
+            <figure>
+              <a href="/index.html"
+                ><img class="brand" src="media/logo.png" alt="Carry Toast Logo"
+              /></a>
+            </figure>
+            <ul>
+              <li><a href="/team.html">Equipo</a></li>
+              <li><a href="/objective.html">Objetivos</a></li>
+              <li><a href="/updates.html">Noticias</a></li>
+              <li><a href="/contact.html">Contacto</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <hr class="hidden" />
@@ -104,7 +108,7 @@
               >info.carrytoast@gmail.com</a
             >
           </p>
-          <p>&#169; <span id="year">2019</span> Carry Toast Studio</p>
+          <p>&#169; <span id="year"></span> Carry Toast Studio</p>
           <div class="footer-social">
             <a href="#"><em class="fa fa-instagram"></em></a>
             <a href="#"><em class="fa fa-facebook-square"></em></a>
