@@ -13,7 +13,7 @@ footer {
 
   .footer-text {
     font-family: "Open Sans";
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 
     width: 50%;
 
@@ -24,11 +24,16 @@ footer {
 
     p {
       color: inherit;
-      max-width: 60%;
       margin: auto 5%;
 
       a {
         color: inherit;
+      }
+    }
+
+    &.footer-info {
+      .footer-info-wrapper {
+        max-width: 60%;
       }
     }
 
@@ -57,6 +62,7 @@ footer {
     a {
       color: inherit;
       padding: 5px 10px;
+      margin: 0 3px;
       text-decoration: none;
       border-radius: 50%;
       transition: all 0.3s linear;
@@ -74,6 +80,16 @@ footer {
 
     .footer-text {
       width: 100%;
+
+      p {
+        max-width: 60%;
+      }
+
+      &.footer-info {
+        .footer-info-wrapper {
+          max-width: none;
+        }
+      }
 
       &.footer-info,
       &.footer-copyright {

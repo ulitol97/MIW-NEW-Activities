@@ -208,9 +208,6 @@ nav {
     margin: auto 10px;
     cursor: pointer;
     z-index: 9999;
-    border-radius: 50%;
-    color: #222;
-    transition: color 0.3s ease;
 
     &.open {
       position: fixed;
@@ -257,8 +254,7 @@ nav {
     }
 
     span {
-      background-color: #fff;
-      border-radius: 10px;
+      background-color: $white-color;
 
       position: absolute;
       width: 100%;
@@ -271,7 +267,7 @@ nav {
       }
 
       &:nth-child(2) {
-        top: calc(50% - 2px);
+        // top: calc(50% - 2px);
       }
 
       &:nth-child(3) {

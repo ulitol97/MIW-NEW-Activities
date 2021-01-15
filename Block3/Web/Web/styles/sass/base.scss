@@ -54,8 +54,6 @@ body {
   font-size: 1.1rem;
   color: $white-color;
 
-  text-align: center;
-
   h1 {
     padding-left: 16%;
     margin: 5px auto;
@@ -120,7 +118,7 @@ body {
     .bullet-chart::before {
       font-family: "FontAwesome";
       content: $bullet-icon;
-      padding: 0 10px 0 0;
+      margin-right: 2px;
       color: $secondary-color;
     }
   }
@@ -152,6 +150,8 @@ body {
 
   /* Small Mobile  */
   @media screen and (max-width: $breakpoint-small-mobile) {
+    text-align: center;
+
     article {
       padding: 0 25px;
     }

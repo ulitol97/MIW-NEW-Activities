@@ -97,7 +97,7 @@
   padding: 10px 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #3f2833;
+  background-color: rgba(108, 79, 255, 0.3);
   scroll-snap-type: y mandatory;
   /* Big mobile & tablet */
 }
