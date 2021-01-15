@@ -182,6 +182,7 @@ nav ul li a:hover {
 
   .nav-toggle.open {
     position: fixed;
+    height: auto;
     right: 0;
   }
 
