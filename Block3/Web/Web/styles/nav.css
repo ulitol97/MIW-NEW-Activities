@@ -1,30 +1,26 @@
 /* Nav */
 nav {
-  grid-column: 1 / 4;
+  grid-column: 1/4;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #c7113d;
-
   margin-bottom: 25px;
+  /* Big mobile & tablet */
 }
-
 nav .brand {
   display: inline-block;
   margin: 2px;
 }
-
 nav ul {
   display: flex;
   padding-left: 15px;
-  list-style: none; /* Remove virtual space between elements*/
+  list-style: none;
+  /* Remove virtual space between elements*/
 }
-
 nav ul li {
   display: inline-block;
 }
-
 nav ul li a {
   position: relative;
   color: #fff;
@@ -34,60 +30,50 @@ nav ul li a {
   padding: 20px 20px 15px 20px;
   transition: background-color 0.25s ease-in-out 0s;
 }
-
-nav ul li .active {
-  border-bottom-style: solid;
-  border-bottom-color: #ff7a8e;
-  border-bottom-width: 0.2rem;
-
-  background-color: #801727;
-}
-
 nav ul li a:hover {
   border-bottom-style: solid;
   border-bottom-color: #ff7a8e;
   border-bottom-width: 0.2rem;
-
   background-color: #801727;
+}
+nav ul li .active {
+  border-bottom-style: solid;
+  border-bottom-color: #ff7a8e;
+  border-bottom-width: 0.2rem;
+  background-color: #801727;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c7113d;
+    margin-bottom: 0px;
+  }
+  nav ul li .active {
+    border-bottom-style: none;
+    background-color: inherit;
+  }
+  nav ul li a:hover {
+    background-color: transparent;
+    border: 0px;
+  }
+  nav .brand {
+    margin: auto 10px;
+  }
 }
 
 .nav-container .brand {
   display: none;
 }
-
-/* Big mobile & tablet */
-@media screen and (max-width: 767px) {
-  nav {
-    grid-column: 1 / 4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: #c7113d;
-
-    margin-bottom: 0px;
-  }
-
-  nav ul li .active {
-    border-bottom-style: none;
-
-    background-color: inherit;
-  }
-
-  /* Nav responsive */
-
-  nav .brand {
-    margin: auto 10px;
-  }
-
+@media screen and (max-width: 768px) {
   .nav-container {
     position: fixed;
     top: 0;
     left: 0;
-
     display: flex;
     justify-content: space-between;
-
     height: 120%;
     width: 100%;
     z-index: -1;
@@ -95,7 +81,6 @@ nav ul li a:hover {
     opacity: 0;
     transition: all 0.2s ease;
   }
-
   .nav-container .brand {
     display: initial;
     position: absolute;
@@ -105,11 +90,6 @@ nav ul li a:hover {
     transition: transform 0.6s ease-out;
     z-index: 1;
   }
-
-  .nav-toggle.open + .nav-container .brand {
-    transform: translateX(0px);
-  }
-
   .nav-container ul {
     display: flex;
     flex-direction: column;
@@ -119,7 +99,6 @@ nav ul li a:hover {
     padding: 5px 5px;
     transform: translateY(-50%);
   }
-
   .nav-container ul li {
     display: block;
     float: none;
@@ -127,31 +106,6 @@ nav ul li a:hover {
     margin: 5px 5px;
     padding: 10px 5px;
     transition: transform 0.25s ease-out;
-  }
-
-  .nav-container ul li:hover {
-    transform: translateX(-8%);
-  }
-
-  nav ul li a:hover {
-    background-color: transparent;
-    border: 0px;
-  }
-
-  .nav-container ul li:nth-child(1) a {
-    transition-delay: 0.2s;
-  }
-  .nav-container ul li:nth-child(2) a {
-    transition-delay: 0.3s;
-  }
-  .nav-container ul li:nth-child(3) a {
-    transition-delay: 0.4s;
-  }
-  .nav-container ul li:nth-child(4) a {
-    transition-delay: 0.5s;
-  }
-  .nav-container ul li:not(:first-child) {
-    margin-left: 0;
   }
   .nav-container ul li a {
     padding: 10px 25px;
@@ -161,17 +115,56 @@ nav ul li a:hover {
     font-weight: 600;
     transform: translateY(-20px);
     transition: all 0.3s ease;
+    /* Small Mobile */
   }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  .nav-container ul li a {
+    font-size: 24px;
+    transition: all 0.2s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:hover {
+    transform: translateX(-8%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-container ul li:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+/* Responsive for tablet and below */
+@media screen and (max-width: 768px) {
   .nav-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
     position: relative;
     height: 42%;
     width: 28px;
-
     margin: auto 10px;
     cursor: pointer;
     z-index: 9999;
@@ -179,75 +172,52 @@ nav ul li a:hover {
     color: #222;
     transition: color 0.3s ease;
   }
-
   .nav-toggle.open {
     position: fixed;
-    height: auto;
+    width: 28px;
+    height: 28px;
     right: 0;
-  }
-
-  .nav-toggle span {
-    background-color: #fff;
-    border-radius: 10px;
-
-    position: absolute;
-    width: 100%;
-    height: 3px;
-
-    transition: transform 0.3s ease, opacity 0.2s ease;
-  }
-
-  .nav-toggle span:nth-child(1) {
-    top: 0;
-  }
-
-  .nav-toggle span:nth-child(2) {
-    top: calc(50% - 2px);
-  }
-
-  .nav-toggle span:nth-child(3) {
-    bottom: 0;
-  }
-
-  .nav-toggle.open span:nth-child(1) {
-    top: 50%;
-    transform: rotate(45deg);
-  }
-
-  .nav-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.open span:nth-child(3) {
-    top: 50%;
-    transform: rotate(-45deg);
-  }
-
-  /* .nav-toggle::after {
-    content: "\f0c9";
-    font-family: FontAwesome;
-    font-size: 2.1em;
-  } */
-
-  .nav-toggle.open {
-    /*transform: (45deg);*/
     color: #fff;
   }
-
   .nav-toggle.open + .nav-container {
     z-index: 9990;
     opacity: 1;
+  }
+  .nav-toggle.open + .nav-container .brand {
+    transform: translateX(0px);
   }
   .nav-toggle.open + .nav-container ul li a {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Small Mobile */
-@media screen and (max-width: 480px) {
-  .nav-container ul li a {
-    font-size: 24px;
-    transition: all 0.2s ease;
+  .nav-toggle.open span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.open span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  .nav-toggle span {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+  .nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  .nav-toggle span:nth-child(2) {
+    top: calc(50% - 2px);
+  }
+  .nav-toggle span:nth-child(3) {
+    bottom: 0;
   }
 }
+
+/*# sourceMappingURL=nav.css.map */

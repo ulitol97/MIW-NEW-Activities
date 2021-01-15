@@ -1,13 +1,13 @@
 /* Updates */
+
+@import "variables.scss";
+
 .animated {
   max-width: 30%;
   margin: 0 25%;
+
   /* Big mobile & tablet */
-}
-@media screen and (max-width: 767px) {
-  .animated {
+  @media screen and (max-width: 767px) {
     max-width: 40%;
   }
 }
-
-/*# sourceMappingURL=updates.css.map */

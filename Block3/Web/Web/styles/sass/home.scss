@@ -1,0 +1,185 @@
+/* Home */
+
+@import "variables.scss";
+
+/* Intro quote content */
+.intro {
+  grid-column: 2 / 2;
+  text-align: center;
+  margin: auto;
+  color: $motto-margin-color;
+
+  h1 {
+    & > q {
+      display: inline-block;
+      position: relative;
+      padding-left: 1em;
+      border-left: 0.2em solid $motto-color;
+
+      font-family: "Sanchez", serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 100;
+    }
+  }
+
+  q {
+    & + small {
+      float: right;
+      margin: 20px 5px;
+
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.8em;
+      font-weight: 600;
+
+      color: $motto-color;
+
+      &::before {
+        content: "\2015";
+      }
+    }
+  }
+
+  /* Small Desktop */
+  @media screen and (max-width: $breakpoint-desktop) {
+    h1 > q {
+      display: inline-block;
+      position: relative;
+      padding-left: 1em;
+      border-left: 0.2em solid #ffcb9a;
+
+      font-family: "Sanchez", serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      font-weight: 100;
+    }
+
+    q + small {
+      float: right;
+      margin: 10px 5px;
+
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.75em;
+      font-weight: 700;
+
+      color: $motto-color;
+    }
+  }
+
+  /* Big mobile & tablet */
+  @media screen and (max-width: $breakpoint-tablet) {
+    grid-column: 1 / 4;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    color: $motto-margin-color;
+  }
+
+  /* Small Mobile */
+  @media screen and (max-width: $breakpoint-small-mobile) {
+    h1 {
+      & > q {
+        display: inline-block;
+        position: relative;
+        padding-left: 1em;
+        border-left: 0.2em solid $motto-color;
+
+        font-family: "Sanchez", serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 100;
+      }
+    }
+
+    q {
+      & + small {
+        float: right;
+        margin: 10px 5px;
+
+        font-family: "Noto Sans", sans-serif;
+        font-size: 0.7em;
+        font-weight: 700;
+
+        color: $motto-color;
+      }
+    }
+  }
+}
+
+/* Side content */
+.side-content {
+  grid-column: 3;
+  grid-row: 3;
+
+  max-height: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 25px 15% 5px 0;
+  padding: 10px 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: $aside-background-color;
+
+  border-radius: 10%;
+
+  .news-summary {
+    color: $white-color;
+    padding-bottom: 18px;
+
+    h3 {
+      font-family: "Open Sans";
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 80%;
+      margin: 5px auto;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .news-image {
+    display: block;
+    margin: 0 auto;
+
+    max-width: 75%;
+    max-height: 130px;
+    margin: auto;
+  }
+
+  /* Big mobile & tablet */
+  @media screen and (max-width: $breakpoint-tablet) {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    max-height: fit-content;
+
+    flex-direction: row;
+
+    margin: 5px 5%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .news-summary {
+      min-width: 50%;
+      padding-top: 10px;
+
+      h4 {
+        font-size: 1rem;
+      }
+    }
+
+    .news-image {
+      max-height: 100px;
+    }
+  }
+}
