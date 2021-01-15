@@ -15,7 +15,7 @@ footer {
     font-family: "Open Sans";
     font-size: 0.8rem;
 
-    width: 100%;
+    width: 50%;
 
     margin: 15px 0;
     margin-top: 10px;
@@ -31,23 +31,28 @@ footer {
         color: inherit;
       }
     }
+
+    &.footer-info,
+    &.footer-copyright {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
-  .footer-info p {
-    text-align: left;
-    margin: 10px auto;
+  .footer-info p,
+  .footer-copyright p {
+    margin: 10px 0;
   }
 
   .footer-copyright p {
-    margin: 12px 5%;
     text-align: center;
   }
 
   .footer-social {
-    text-align: center;
     font-size: 1.5rem;
-    margin: auto 5%;
-    max-width: 60%;
+    display: flex;
 
     a {
       color: inherit;
@@ -67,17 +72,24 @@ footer {
   @media screen and (max-width: $breakpoint-tablet) {
     flex-direction: column;
 
-    .footer-info p {
-      margin: 10px 5%;
+    .footer-text {
+      width: 100%;
+
+      &.footer-info,
+      &.footer-copyright {
+        align-items: start;
+      }
     }
 
-    .footer-copyright p {
-      margin: 12px 5%;
-      text-align: left;
+    .footer-info p,
+    .footer-copyright p,
+    .footer-social {
+      margin-left: 5%;
     }
 
     .footer-social {
-      text-align: left;
+      // Compensate icon padding
+      transform: translateX(-10px);
     }
   }
 }

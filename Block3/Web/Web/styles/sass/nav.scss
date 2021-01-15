@@ -3,6 +3,7 @@
 @import "variables.scss";
 
 nav {
+  grid-row: 1 / 1;
   grid-column: 1 / 4;
   display: flex;
   justify-content: center;
@@ -201,7 +202,7 @@ nav {
     align-items: center;
 
     position: relative;
-    height: 42%;
+    height: 45%;
     width: 28px;
 
     margin: auto 10px;

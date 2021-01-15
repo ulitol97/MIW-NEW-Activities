@@ -10,7 +10,7 @@ footer {
 footer .footer-text {
   font-family: "Open Sans";
   font-size: 0.8rem;
-  width: 100%;
+  width: 50%;
   margin: 15px 0;
   margin-top: 10px;
   color: #fff;
@@ -23,19 +23,22 @@ footer .footer-text p {
 footer .footer-text p a {
   color: inherit;
 }
-footer .footer-info p {
-  text-align: left;
-  margin: 10px auto;
+footer .footer-text.footer-info, footer .footer-text.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-info p,
+footer .footer-copyright p {
+  margin: 10px 0;
 }
 footer .footer-copyright p {
-  margin: 12px 5%;
   text-align: center;
 }
 footer .footer-social {
-  text-align: center;
   font-size: 1.5rem;
-  margin: auto 5%;
-  max-width: 60%;
+  display: flex;
 }
 footer .footer-social a {
   color: inherit;
@@ -52,15 +55,19 @@ footer .footer-social a:hover {
   footer {
     flex-direction: column;
   }
-  footer .footer-info p {
-    margin: 10px 5%;
+  footer .footer-text {
+    width: 100%;
   }
-  footer .footer-copyright p {
-    margin: 12px 5%;
-    text-align: left;
+  footer .footer-text.footer-info, footer .footer-text.footer-copyright {
+    align-items: start;
+  }
+  footer .footer-info p,
+footer .footer-copyright p,
+footer .footer-social {
+    margin-left: 5%;
   }
   footer .footer-social {
-    text-align: left;
+    transform: translateX(-10px);
   }
 }
 

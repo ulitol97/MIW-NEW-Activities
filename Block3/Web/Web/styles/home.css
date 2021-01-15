@@ -2,6 +2,7 @@
 /* Home */
 /* Intro quote content */
 .intro {
+  grid-row: 2/2;
   grid-column: 2/2;
   text-align: center;
   margin: auto;
@@ -97,12 +98,13 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #3f2833;
-  border-radius: 10%;
+  scroll-snap-type: y mandatory;
   /* Big mobile & tablet */
 }
 .side-content .news-summary {
   color: #fff;
   padding-bottom: 18px;
+  scroll-snap-align: start;
 }
 .side-content .news-summary h3 {
   font-family: "Open Sans";
@@ -130,6 +132,7 @@
     margin: 5px 5%;
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
   }
   .side-content .news-summary {
     min-width: 50%;
@@ -141,6 +144,17 @@
   .side-content .news-image {
     max-height: 100px;
   }
+}
+.side-content::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.side-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+.side-content::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: 1px solid slategrey;
 }
 
 /*# sourceMappingURL=home.css.map */

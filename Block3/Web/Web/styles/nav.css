@@ -1,5 +1,6 @@
 /* Nav */
 nav {
+  grid-row: 1/1;
   grid-column: 1/4;
   display: flex;
   justify-content: center;
@@ -177,7 +178,7 @@ nav ul li .active {
     justify-content: space-evenly;
     align-items: center;
     position: relative;
-    height: 42%;
+    height: 45%;
     width: 28px;
     margin: auto 10px;
     cursor: pointer;
