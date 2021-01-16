@@ -131,7 +131,10 @@
 
   .news-summary {
     color: $white-color;
-    padding-bottom: 18px;
+    padding: 18px 0;
+
+    display: flex;
+    flex-direction: column;
 
     scroll-snap-align: start;
 
@@ -140,7 +143,12 @@
       font-size: 1.2rem;
       font-weight: 600;
       width: 80%;
-      margin: 5px auto;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      height: 30%;
+      overflow: hidden;
 
       a {
         color: inherit;
@@ -149,12 +157,10 @@
   }
 
   .news-image {
-    display: block;
-    margin: 0 auto;
+    margin: auto;
 
     max-width: 75%;
-    max-height: 130px;
-    margin: auto;
+    max-height: 250px;
   }
 
   // Scroll snap: vertical on desktop
@@ -180,13 +186,9 @@
       min-width: 50%;
       padding-top: 10px;
 
-      h4 {
-        font-size: 1rem;
+      h3 {
+        font-size: 0.9rem;
       }
-    }
-
-    .news-image {
-      max-height: 100px;
     }
   }
 

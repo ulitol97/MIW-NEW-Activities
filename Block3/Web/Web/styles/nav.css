@@ -76,7 +76,7 @@ nav ul li .active {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: #1f2227;
+    background: #1f2833;
     opacity: 0;
     pointer-events: none;
     transition: all 0.2s ease;
@@ -125,7 +125,7 @@ nav ul li .active {
   .nav-container .nav-container-wrapper ul li a {
     padding: 10px 25px;
     opacity: 0;
-    color: #ff304c;
+    color: #AA9CFE;
     font-size: 40px;
     font-weight: 600;
     transform: translateY(-20px);
