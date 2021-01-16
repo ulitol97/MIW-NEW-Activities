@@ -1,0 +1,42 @@
+/* Objective */
+
+@import "variables.scss";
+
+ul.news-list {
+  width: 100%;
+
+  li {
+    margin-bottom: 60px;
+  }
+
+  .news-title {
+    display: inline;
+
+    a {
+      color: $white-color;
+      white-space: normal;
+      text-decoration: underline;
+
+      transition: color 0.3s linear;
+
+      &::before {
+        content: none;
+      }
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  .news-subtitle {
+    margin: 5px auto;
+  }
+}
+
+// Invisible due to the infinite feed, so hide on mobile
+.side-content {
+  /* Big mobile & tablet */
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ footer {
   grid-row: 5;
   display: flex;
   width: 100%;
+  z-index: 9999;
   background-color: #6F55F2;
   /* Tablet & smaller */
 }

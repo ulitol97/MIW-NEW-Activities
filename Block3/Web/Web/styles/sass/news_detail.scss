@@ -10,7 +10,14 @@
 }
 
 .main-content {
+  grid-row: 2 / 5;
+  grid-column: 1 / 4;
+
   ul {
     max-width: 100%;
   }
+}
+
+.side-content {
+  display: none;
 }

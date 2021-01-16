@@ -9,6 +9,8 @@ footer {
   display: flex;
   width: 100%;
 
+  z-index: 9999;
+
   background-color: $primary-color;
 
   .footer-text {

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/base-3-rows.css" />
-    <link rel="stylesheet" href="styles/objective.css" />
+    <link rel="stylesheet" href="styles/news_list.css" />
 
     <link
       rel="stylesheet"
@@ -16,6 +15,8 @@
     />
 
     <script defer src="js/ui.js"></script>
+    <script defer src="js/lazy_load.js"></script>
+
     <noscript>Necesitas activar Javascript para utilizar esta página.</noscript>
   </head>
   <body>
@@ -47,51 +48,135 @@
         </div>
       </nav>
       <section class="main-content">
-        <h1>Nuestra meta</h1>
+        <h1>Últimas noticias</h1>
         <article>
-          <h2>¿Qué buscamos?</h2>
-          <ul>
-            <li class="bullet-chart">
-              Todos los miembros de Carry Toast tenemos un pasado (y un
-              presente) común lleno de momentos trepidantes gracias a los
-              videojuegos.
+          <h2>Noticias recientes por orden de subida</h2>
+          <ul class="news-list">
+            <li class="bullet-chart news">
+              <h4 class="news-title">
+                <a href="/news_detail.html"
+                  >Call of the Sea, el nuevo indie con sello español</a
+                >
+              </h4>
+              <h5 class="news-subtitle">
+                Un nuevo estudio, de origen español, habla de las influencias y
+                objetivos de esta aventura de misterio.
+              </h5>
             </li>
             <li class="bullet-chart">
-              Es el momento de devolverle al arte del videojuego todo lo que nos
-              ha dado.
+              <h4 class="news-title">
+                <a href="/news_detail.html"
+                  >Animal Crossing ya es lo más vendido de 2020</a
+                >
+              </h4>
+              <h5 class="news-subtitle">
+                Hasta la fecha, el juego exclusivo de Switch ha vendido poco más
+                de 6.4 millones de copias tan solo en el país del sol naciente.
+              </h5>
+            </li>
+            <li class="bullet-chart">
+              <h4 class="news-title">
+                <a href="/news_detail.html"
+                  >Noticias sobre Silksong en la revista Edge</a
+                >
+              </h4>
+              <h5 class="news-subtitle">
+                Hollow Knight Silksong protagoniza el nuevo número de la revista
+                EDGE, y revela nuevos detalles e imágenes... pero no se sabe
+                todavía la fecha.
+              </h5>
+            </li>
+            <li class="bullet-chart">
+              <h4 class="news-title">
+                <a href="/news_detail.html">Hades sorprende en los GOTY 2020</a>
+              </h4>
+              <h5 class="news-subtitle">
+                De todos los indies aparecidos este año (y no son pocos), decir
+                que Hades es el mejor de todos ellos no me parece ninguna
+                exageración.
+              </h5>
+            </li>
+            <li class="bullet-chart">
+              <h4 class="news-title">
+                <a href="/news_detail.html">Spelunky 2: primeras impresiones</a>
+              </h4>
+              <h5 class="news-subtitle">
+                Impresiones de Spelunky 2. Podemos afirmar sin temor a
+                equivocarnos que es el videojuego más difícil de la década. ¡Y
+                menuda maravilla!
+              </h5>
             </li>
           </ul>
-          <img class="animated" src="media/alien.gif" alt="Happy Alien" />
-          <h2>Nuestra especialidad</h2>
-          <ul>
-            <li class="bullet-chart">
-              Nos dedicamos al diseño de videojuegos en 2D fuertemente
-              inspirados por el género
-              <a href="https://en.wikipedia.org/wiki/Metroidvania"
-                >metroidvania</a
-              >.
-            </li>
-          </ul>
-          <h2>Nuestra inspiración</h2>
-          <ul>
-            <li class="bullet-chart">
-              En el estudio compartimos una visión común del potencial del
-              videojuego indie para transmitir mensajes que rozen el absurdo y
-              la genialidad al mismo tiempo.
-            </li>
-            <li class="bullet-chart">
-              Debemos gran parte de nuestra motivación al estudio
-              <a href="https://teamcherry.com.au/">Team Cherry</a> y el mundo
-              que crearon con su videojuego <q>Hollow Knight</q>.
-            </li>
-          </ul>
-          <iframe
-            src="https://www.youtube.com/embed/UAO2urG23S4"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
         </article>
       </section>
+      <aside class="side-content">
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html"
+              >Noticias sobre Silksong en la revista Edge</a
+            >
+          </h3>
+          <img
+            class="news-image"
+            src="media/hornet.png"
+            alt="Hornet from Silksong"
+          />
+        </div>
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html">Hades sorprende en los GOTY 2020</a>
+          </h3>
+          <img
+            class="news-image"
+            src="media/hades.png"
+            alt="Zagreo from Hades"
+          />
+        </div>
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html">Spelunky 2: primeras impresiones</a>
+          </h3>
+          <img
+            class="news-image"
+            src="media/spelunky2.png"
+            alt="Spelunky 2 title"
+          />
+        </div>
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html"
+              >Bethesda estaría trabajando en un juego de Indiana Jones</a
+            >
+          </h3>
+          <img
+            class="news-image"
+            src="media/indiana_jones.jpg"
+            alt="Indiana Jones thematic pic"
+          />
+        </div>
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html"
+              >Nuevo teaser de Star Wars...¿de Ubisoft?</a
+            >
+          </h3>
+          <img
+            class="news-image"
+            src="media/sw.jpg"
+            alt="Star Wars Squadrons pic"
+          />
+        </div>
+        <div class="news-summary">
+          <h3>
+            <a href="/news_detail.html">Gris de oferta para Nintendo Switch</a>
+          </h3>
+          <img
+            class="news-image"
+            src="media/gris.png"
+            alt="Gris main character"
+          />
+        </div>
+      </aside>
       <footer class="footer">
         <aside class="footer-text footer-info">
           <div class="footer-info-wrapper">

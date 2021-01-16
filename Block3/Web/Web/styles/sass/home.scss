@@ -2,6 +2,18 @@
 
 @import "variables.scss";
 
+.main-content {
+  grid-row: 3;
+}
+
+.side-content {
+  grid-row: 3;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    grid-row: 4;
+  }
+}
+
 /* Intro quote content */
 .intro {
   grid-row: 2 / 2;
@@ -107,104 +119,5 @@
         color: $motto-color;
       }
     }
-  }
-}
-
-/* Side content */
-.side-content {
-  grid-column: 3;
-  grid-row: 3;
-
-  max-height: 550px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  margin: 25px 15% 5px 0;
-  padding: 10px 0;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  background-color: $aside-background-color;
-
-  .news-summary {
-    color: $white-color;
-    padding: 18px 0;
-
-    display: flex;
-    flex-direction: column;
-
-    scroll-snap-align: start;
-
-    h3 {
-      font-family: "Open Sans";
-      font-size: 1.2rem;
-      font-weight: 600;
-      width: 80%;
-
-      margin-left: auto;
-      margin-right: auto;
-
-      height: 30%;
-      overflow: hidden;
-
-      a {
-        color: inherit;
-      }
-    }
-  }
-
-  .news-image {
-    margin: auto;
-
-    max-width: 75%;
-    max-height: 250px;
-  }
-
-  // Scroll snap: vertical on desktop
-  scroll-snap-type: y mandatory;
-
-  /* Big mobile & tablet */
-  @media screen and (max-width: $breakpoint-tablet) {
-    grid-column: 1 / 4;
-    grid-row: 4;
-    max-height: fit-content;
-
-    flex-direction: row;
-
-    margin: 5px 5%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    // Scroll snap: horizontal on tablet and below
-    scroll-snap-type: x mandatory;
-
-    .news-summary {
-      min-width: 50%;
-      padding-top: 10px;
-
-      h3 {
-        font-size: 0.9rem;
-      }
-    }
-  }
-
-  // Scrollbars
-
-  &::-webkit-scrollbar {
-    width: 0.2rem;
-    height: 0.2rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-thumb-color;
-    outline: 1px solid $scrollbar-thumb-outline-color;
   }
 }
