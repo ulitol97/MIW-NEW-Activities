@@ -231,7 +231,7 @@ body {
 
   /* Big mobile & tablet */
   @media screen and (max-width: $breakpoint-tablet) {
-    // Not sicky anymore
+    // Not sticky anymore
     position: static;
 
     grid-column: 1 / 4;

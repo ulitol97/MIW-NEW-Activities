@@ -193,22 +193,24 @@ nav {
   }
 }
 
-/* Responsive for tablet and below */
-@media screen and (max-width: $breakpoint-tablet) {
-  .nav-toggle {
+/* Responsive nav for tablet and below */
+.nav-toggle {
+  display: none;
+
+  @media screen and (max-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
+  
     position: relative;
     height: 45%;
     width: 28px;
-
+  
     margin: auto 10px;
     cursor: pointer;
     z-index: 9999;
-
+  
     &.open {
       position: fixed;
 
@@ -252,7 +254,7 @@ nav {
         }
       }
     }
-
+  
     span {
       background-color: $white-color;
 
@@ -266,13 +268,10 @@ nav {
         top: 0;
       }
 
-      &:nth-child(2) {
-        // top: calc(50% - 2px);
-      }
-
       &:nth-child(3) {
         bottom: 0;
       }
     }
+    
   }
 }
