@@ -48,23 +48,11 @@
 }
 @media screen and (max-width: 1024px) {
   .intro h1 > q {
-    display: inline-block;
-    position: relative;
-    padding-left: 1em;
-    border-left: 0.2em solid #ffcb9a;
-    font-family: "Sanchez", serif;
-    font-style: italic;
-    font-size: 1.5rem;
     line-height: 1.8rem;
-    font-weight: 100;
   }
   .intro q + small {
-    float: right;
     margin: 10px 5px;
-    font-family: "Noto Sans", sans-serif;
     font-size: 0.75em;
-    font-weight: 700;
-    color: #ffcb9a;
   }
 }
 @media screen and (max-width: 768px) {
@@ -78,23 +66,11 @@
 }
 @media screen and (max-width: 480px) {
   .intro h1 > q {
-    display: inline-block;
-    position: relative;
-    padding-left: 1em;
-    border-left: 0.2em solid #ffcb9a;
-    font-family: "Sanchez", serif;
-    font-style: italic;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    font-weight: 100;
   }
   .intro q + small {
-    float: right;
-    margin: 10px 5px;
-    font-family: "Noto Sans", sans-serif;
     font-size: 0.7em;
-    font-weight: 700;
-    color: #ffcb9a;
   }
 }
 

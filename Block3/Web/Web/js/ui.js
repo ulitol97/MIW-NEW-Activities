@@ -2,7 +2,7 @@ const navElement = document.querySelector("nav");
 const navContentsElement = document.querySelector(".nav-container");
 const navToggleElement = document.getElementById("nav-toggle");
 const navOpenClass = "open";
-const navStickyClass = "sticky";
+const stickyClass = "sticky";
 const navClosedClass = "closed";
 
 const yearElement = document.getElementById("year");
@@ -11,11 +11,11 @@ const yearElement = document.getElementById("year");
 function toggleNav() {
   if (navToggleElement.classList.contains(navOpenClass)) {
     // navContentsElement.classList.add("hidden");
-    navElement.classList.add(navStickyClass);
+    navElement.classList.add(stickyClass);
     navToggleElement.classList.replace(navOpenClass, navClosedClass);
   } else {
     // navContentsElement.classList.remove("hidden");
-    navElement.classList.remove(navStickyClass);
+    navElement.classList.remove(stickyClass);
     navToggleElement.classList.replace(navClosedClass, navOpenClass);
   }
 }
