@@ -170,7 +170,10 @@ nav ul li .active {
   }
 }
 
-/* Responsive for tablet and below */
+/* Responsive nav for tablet and below */
+.nav-toggle {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .nav-toggle {
     display: flex;
