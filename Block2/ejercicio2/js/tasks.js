@@ -46,10 +46,11 @@ function isValidTask(task) {
       return false;
     }
 
-    if (taskExists(task)) {
-      setError("Nombre de tarea repetido");
-      return false;
-    }
+    // Check repeated task name
+    // if (taskExists(task)) {
+    //   setError("Nombre de tarea repetido");
+    //   return false;
+    // }
   }
 
   setError(null);
