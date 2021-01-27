@@ -80,7 +80,7 @@ function addTaskUi(task) {
   taskRow.appendChild(date);
 
   const length = document.createElement("td");
-  length.innerText = `${task.length / 60} minutos`;
+  length.innerText = `${task.length / 60} minuto(s)`;
   taskRow.appendChild(length);
 
   const status = document.createElement("td");
