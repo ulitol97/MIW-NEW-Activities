@@ -155,7 +155,7 @@ function showNotification(task) {
           ? "A por la siguiente tarea"
           : `Hora de un descanso`
       }`,
-      icon: "/res/notification-icon.png",
+      icon: "/MIW-NEW-Activities/res/notification-icon.png",
       tag: notificationTag,
       renotify: true,
     };
