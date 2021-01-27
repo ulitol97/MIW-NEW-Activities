@@ -149,7 +149,7 @@ function showNotification(task) {
         ? "Descanso finalizado"
         : `Tarea "${task.name}" finalizada`;
     const options = {
-      body: `Duración: ${Math.floor(task.length / 60)} minutos\n${
+      body: `Duración: ${Math.floor(task.length / 60)} minuto(s)\n${
         task.type == taskTypes.rest
           ? "A por la siguiente tarea"
           : `Hora de un descanso`
