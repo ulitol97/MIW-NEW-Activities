@@ -1,6 +1,8 @@
 // UI Management
 const root = document.documentElement;
 
+const baseTitle = "MIW - Pomodoro";
+
 const sessionTaskDuration = "sessionTaskDuration";
 const sessionRestDuration = "sessionRestDuration";
 
@@ -19,6 +21,21 @@ const tasksElement = document.getElementById("tasklist-body");
 const taskExampleElement = document.getElementById("task-sample");
 
 const errorElement = document.getElementById("error");
+
+// Title
+function setTitle(n) {
+  // Task title
+  if (n && typeof n === "number") {
+    const titlePrefix =
+      currentTask && currentTask.type == taskTypes.work
+        ? currentTask.name
+        : "Descanso";
+
+    document.title = `${secondsToString(parseInt(n))} - ${titlePrefix}`;
+  } else {
+    document.title = n;
+  }
+}
 
 // Timer
 function updateTimer(n) {
@@ -108,6 +125,7 @@ function setStateUi(state) {
 
 function uiPaused() {
   updateTimer(0);
+  setTitle(baseTitle);
 
   const nextIsRest =
     typeof currentTask !== "undefined"

@@ -101,6 +101,7 @@ function stopTask(manually) {
 
 function onmessageReceived(message) {
   if (typeof message.data === "number") {
+    setTitle(message.data);
     updateTimer(message.data);
   } else {
     stopTask(false);
