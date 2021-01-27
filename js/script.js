@@ -33,6 +33,8 @@ function showErrors(errors) {
 }
 
 function setUp() {
+  console.info("Comprobando permiso notificaciones");
+  requestNotificationPermission();
   console.info("Iniciando pomodoro");
   setState(pomodoroStates.paused);
 }
@@ -126,6 +128,19 @@ btnStop.addEventListener("click", (e) => {
 // Notifications
 const notificationTag = "new-pomodoro";
 
+// Ask for permissions
+function requestNotificationPermission() {
+  if (Notification.permission === "default") {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        new Notification("Notificaciones activadas", {
+          body: "Se mostrarán notificaciones tras cada tarea / descanso",
+        });
+      }
+    });
+  }
+}
+
 // Receives information about the task that has ended
 function showNotification(task) {
   const notify = (task) => {
@@ -134,7 +149,7 @@ function showNotification(task) {
         ? "Descanso finalizado"
         : `Tarea "${task.name}" finalizada`;
     const options = {
-      body: `Duración: ${task.length / 60} minutos\n${
+      body: `Duración: ${Math.floor(task.length / 60)} minutos\n${
         task.type == taskTypes.rest
           ? "A por la siguiente tarea"
           : `Hora de un descanso`
