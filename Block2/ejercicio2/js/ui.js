@@ -17,6 +17,7 @@ sliderValueElement.innerText = sliderElement.value;
 sliderElement.oninput = () =>
   (sliderValueElement.innerText = sliderElement.value);
 
+const tasksRoot = document.getElementById("tasklist");
 const tasksElement = document.getElementById("tasklist-body");
 const taskExampleElement = document.getElementById("task-sample");
 
@@ -89,6 +90,8 @@ function addTaskUi(task) {
   taskRow.appendChild(status);
 
   tasksElement.prepend(taskRow);
+
+  tasksRoot.scrollTop = 0;
 }
 
 function endTaskUi(task, manually) {
